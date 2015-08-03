@@ -10,7 +10,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('jade', function () {
-	gulp.src('./src/jade/*/*.jade')
+	gulp.src('./src/jade/**/*.jade')
 	.pipe(jade())
 	.pipe(gulp.dest('./'));
 });
