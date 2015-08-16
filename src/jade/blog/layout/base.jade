@@ -18,21 +18,23 @@ html
 	body
 		div#blog-header
 			block header
-			div.row
-				div(class="col-md-8")
+			div#blog-abstract
+				block blog-abstract
 
-				div.col-md-4#blog-abstract
-					block blog-abstract
-
-			div.row
-				div.col-md-12#blog-title
+		div#blog-context
+			div#blog-content
+				div#blog-title
 					block blog-title
+				div#blog-date
+					block blog-date
+				div#blog-text
+					block blog-text
 
-		div#blog-content
-			div#blog-text
-				block blog-text
+				div#disqus_thread
 
-		div#blog-footer
+			div#blog-footer
+				span &#169;flowertea 2015
+
 
 		div#side-bar
 			div#blog-shared-btn
@@ -52,8 +54,17 @@ html
 					div(class="share-btn", data-color="#e85061")
 						i(class="fa fa-pinterest-p")
 
+
 	script(type='text/javascript').
 		var btns = ['fb-btn', 'tw-btn', 'gg-btn', 'pt-btn'];
 	script(type="text/javascript" src="../../assets/scripts/shareURL.js")
+
+	script(type='text/javascript').
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+		    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
 
 	block extraScript

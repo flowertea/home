@@ -1,3 +1,7 @@
+/**#E69316**/
+a {
+  color: #33adad #33adad; }
+
 .share-btn {
   display: inline-block;
   padding: 10px 0;
@@ -9,10 +13,13 @@
 
 #side-bar {
   position: fixed;
-  top: 0;
+  top: 61.8%;
   left: 0; }
 
 #blog-abstract {
+  position: absolute;
+  bottom: 38.2%;
+  right: 10%;
   width: 340px;
   overflow: none;
   padding: 21px;
@@ -25,9 +32,48 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 61.8%;
   background-size: cover;
   background-position: center; }
 
 #blog-header {
   width: 100%; }
+
+#blog-title {
+  color: #e69316; }
+  #blog-title h1 {
+    font-size: 60px; }
+
+#blog-date {
+  color: #33adad; }
+
+#blog-context {
+  position: absolute;
+  top: 61.8%; }
+
+#blog-content {
+  margin-right: 20%;
+  margin-left: 30%; }
+
+#blog-text {
+  font-size: 20px; }
+
+#blog-footer {
+  width: 100%;
+  color: white;
+  background-color: #33adad;
+  text-align: center;
+  margin-top: 100px;
+  padding-top: 20px;
+  padding-bottom: 100px; }
+
+@media (min-width: 1024px) {
+  #blog-content {
+    margin-left: 38.2%;
+    margin-right: 10%; } }
+
+@media (max-width: 640px) {
+  #blog-title h1 {
+    font-size: 40px; }
+  #blog-abstract {
+    display: none; } }
