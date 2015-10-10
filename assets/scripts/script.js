@@ -103,6 +103,15 @@ $(function(){
 	$('#side-menu').hide();
 	populateBG();
 	populateCache();
+
+	//slide btn
+	$('.menu-slide-btn').each(function(){
+		$(this).click(function(){
+			var top = $('a[name="'+$(this).data('id')+'"]').position().top - $('#side-menu').height();
+			$("html, body").animate({ scrollTop: top+"px" }, 300);
+		});
+	});
+
 	// form
 	$('.book-toggle-btn').each(function(){
 		$(this).click(function(){
