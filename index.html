@@ -54,7 +54,8 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 		<!-- My style :3 -->
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="assets/css/portfolio.css">
 
 		<style type="text/css">
 			/*[data-sr] { visibility: hidden; }*/
@@ -63,12 +64,14 @@
 	<body>
 		<div id="splash-bg-container"></div>
 		<div id="side-menu">
-			<a href="#about"><div id="splash2">My Services</div></a>
-			<a href="#projects"><div id="splash3">tmep</div></a>
+			<a href="#about"><div id="splash2">Services</div></a>
+			<a href="#drawings"><div id="splash3">Drawings</div></a>
 			<a href="#contact"><div id="splash5">About Me</div></a>
+			<a><div>Testimonials</div></a>
+			<a><div>Blog</div></a>
 		</div>
 		<div id="splash-content-container">
-			<div class="splash-div full-height" data-id="splash1" data-image="images/1.jpg">
+			<div class="splash-div full-height" data-id="splash1" data-image="assets/images/1.jpg">
 				<div id="splash-title" class="full-center">
 					Whisper in the Waves
 					<div class="splash-subtitle">
@@ -80,84 +83,59 @@
 			</div>
 
 			<a name="about"></a>
-			<div class="splash-div" data-id="splash2" data-image="images/2.jpg">
-				<div class="container color-black">
-					<div class="row">
-						<div class="col-md-4">
-							<center><img class="circle-image" src="images/profile.jpg" title="When I was 7 years old!"></center>
-							<h3>My Story</h3>
-							<p>	Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent id tempor ipsum. Fusce at massa ac nunc porta fringilla sed eget neque. Quisque quis pretium nulla. Fusce eget bibendum neque, vel volutpat augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-						</div>
-						<div class="col-md-8" ng-controller="viewCtrl">
-							<h3>My Background</h3>
-							<a class="anchor-no-style" ng-repeat="e in experience" target="_blank" href="{{e.url}}">
-								<div class="hover-hightlight">
-									<div class="row">
-										<div class="col-xs-8">
-											<i class="fa {{e.faIcon}}"></i> <strong>{{e.name}}</strong>
-										</div>
-										<div class="col-xs-4 text-right">
-											{{e.time}}
-										</div>
-									</div>
-									<i>{{e.location}}</i>
-									<br>{{e.description}}
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
+			<div class="splash-div min-full-height" data-id="splash2" data-image="assets/images/2.jpg">
+				
 			</div>
 
-			<a name="projects"></a>
-			<div class="splash-div" data-id="splash3" data-image="images/3.jpg">
-				<div class="container color-black">
-					<h3>My Projects</h3>
-					<div class="row" ng-controller="viewCtrl">
-						<a class="anchor-no-style" ng-repeat="p in projects"
-							ng-init="$last ? refresh() : null"
-							href="{{p.url}}" target="_blank">
-							<div class="col-md-4 hover-hightlight">
-								<div class="square-img" style="background-image:url('{{p.image}}');"></div>
-								<br>
-								<div class="row">
-									<div class="col-xs-8">
-										<strong>{{p.name}}</strong>
-									</div>
-									<div class="col-xs-4 text-right">
-										{{p.time}}
-									</div>
-								</div>
-								<i>{{p.location}}</i>
-								<p>{{p.description}}
-							</div>
-						</a>
+			<a name="drawings"></a>
+			<div class="splash-div" data-id="splash3" data-image="assets/images/3.jpg">
+				<div class="portfolio" ng-controller="viewCtrl">
+					<div class="portfolio-title">
+						<div class="portfolio-buttom-align">Sample<br>Drawings</div>
 					</div>
+					<div class="portfolio-image" ng-repeat="d in drawings"
+						ng-init="$last ? refresh() : null" data-image="{{d.image}}">
+						<div class="portfolio-image-toggle">
+							<div class="portfolio-image-title">{{d.name}}</div>
+							<div class="portfolio-image-description">{{d.description}}</div>
+						</div>
+					</div>
+					<div class="portfolio-last">Soul Drawings are drawings of either your higher self or aspects of you, it could be your guides or one of your past life. I will intuitvely ask your guides to give me an image that will help you in this moment. This drawing has a frequency that is healing for you at this time. Sometimes I will add messages from your guides to the drawing as well. It is good to meditate with them.</div>
 				</div>
 			</div>
 
 			<a name="contact"></a>
-			<div class="splash-div full-height" data-id="splash5" data-image="images/4.jpg">
-				<div style="margin:10%"> </div>
-				<div class="container text-center">
-					<h2 class="full-center">Let's Team Up</h2>
-					<div class="splash-subtitle">and change the world!</div>
-					<br>
-					<div class="contact-links">
-						<a href="https://www.facebook.com/alan.doomri" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-						<a href="https://www.facebook.com/alan.doomri" target="_blank"><i class="fa fa-github-square"></i></a>
-						<a href="https://www.facebook.com/alan.doomri" target="_blank"><i class="fa fa-facebook-official"></i></a>
-						<a href="mailto:alan@something.com"><i class="fa fa-envelope-square"></i></a>
+			<div class="splash-div full-height" data-id="splash5" data-image="assets/images/4.jpg">
+				<div style="margin:10%"></div>
+				<div class="container color-black">
+					<div class="row">
+						<div class="col-md-4">
+							<center><img class="circle-image" src="assets/images/profile.jpg"></center>
+							<h3>About Me</h3>
+							<p>My mission is to help people around the world to step into their divinity and full healing.</p>
+						</div>
+						<div class="col-md-8" ng-controller="viewCtrl">
+							<h3>Contact Me</h3>
+							<p>I offer aura alchemy healing, sound healing, Reiki, telepathic readings, oracle readings, sound healing and soul drawings/paintings. I can offer these services either by Skype or in person if you live in Calgary. All my services are offered in English, French and Spanish. To book a reading just send me a private message or email me.</p>
+							<div class="contact-links">
+								<a href="https://www.facebook.com/Whisper-in-the-Waves-1484113901885029/" target="_blank"><i class="fa fa-facebook"></i></a>
+								<a href="skype:Marianas521?userinfo" title="Marianas521"><i class="fa fa-skype"></i></a>
+								<a href="mailto:mseoane52@gmail.com" title="mseoane52@gmail.com"><i class="fa fa-envelope"></i></a>
+							</div>
+							<h1>Mariana Claire</h1>
+						</div>
 					</div>
-
 				</div>
 				<div style="margin:10%"> </div>
-				<div class="container color-black">
+				<div class="container">
 					<div class="credit">&copy;Goldenrati&Phi; | 2015</div>
 				</div>
 			</div>
 		</div>
 	</body>
 	<!-- My script :3 -->
-	<script src="script.js"> </script>
+	<script src="assets/scripts/services.js"> </script>
+	<script src="assets/scripts/drawings.js"> </script>
+	<script src="assets/scripts/portfolio.js"> </script>
+	<script src="assets/scripts/script.js"> </script>
 </html>
