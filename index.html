@@ -113,7 +113,14 @@
 					</div>
 					<div class="col-md-3">
 						<div class="subtitle">Services</div>
-						<p>I offer aura alchemy healing, sound healing, Reiki, telepathic readings, oracle readings, sound healing and soul drawings/paintings. I can offer these services either by Skype or in person if you live in Calgary. All my services are offered in English, French and Spanish. To book a reading just send me a private message or email me.</p>
+						<table>
+							<tr><td>Language</td>
+								<td>Available in English, French and Spanish.</td>
+							</tr>
+							<tr><td>Location</td>
+								<td>Skype or in person if you live in Calgary.</td>
+							</tr>
+						</table>
 						<div class="subtitle"><button type="button" class="btn btn-trans btn-trans-default book-toggle-btn"><strong>BOOK A SESSION</strong></button></div>
 					</div>
 					<div class="col-md-1 backlight" ng-repeat="s in services" data-color="{{s.color}}">
@@ -164,6 +171,7 @@
 								<a href="skype:Marianas521?userinfo" title="Marianas521"><i class="fa fa-skype"></i></a>
 								<a href="mailto:mseoane52@gmail.com" title="mseoane52@gmail.com"><i class="fa fa-envelope"></i></a>
 							</div>
+							<div class="fb-page" data-href="https://www.facebook.com/Whisper-in-the-Waves-1484113901885029/timeline/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"></div>
 						</div>
 					</div>
 				</div>
@@ -173,7 +181,15 @@
 				</div>
 			</div>
 		</div>
+		<div id="fb-root"></div>
 	</body>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 	<!-- My script :3 -->
 	<script src="assets/scripts/services.js"> </script>
 	<script src="assets/scripts/drawings.js"> </script>

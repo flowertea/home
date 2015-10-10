@@ -99,6 +99,16 @@ function postBooking(data, callback){
 	});
 }
 
+function getCurrentDateTime(){
+	var currentdate = new Date(); 
+	return  currentdate.getDate() + "/"
+            + (currentdate.getMonth()+1)  + "/" 
+            + currentdate.getFullYear() + " "  
+            + currentdate.getHours() + ":"  
+            + currentdate.getMinutes() + ":" 
+            + currentdate.getSeconds();
+}
+
 $(function(){
 	$('#side-menu').hide();
 	populateBG();
@@ -136,8 +146,7 @@ $(function(){
 
 	$('#bookingForm').submit(function(){
 		$(this).attr('disabled','disabled');
-		var data = $('#bookingForm').serialize();
-		console.log(data);
+		var data = $('#bookingForm').serialize() + '&created_at='+getCurrentDateTime();
 		postBooking(data, function(){
 			$('#bookingForm-display').fadeOut('fast', function(){
 				$("#success-message").fadeIn('fast');

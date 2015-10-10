@@ -4,7 +4,7 @@ var services = [
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In finibus felis sit amet quam interdum, a cursus lectus ultrices. Quisque semper erat at sagittis eleifend. ",
 		faIcon: "fa-eye",
 		faIconBase: "fa-sun-o",
-		color: "#FF0000"
+		color: "#FF6666"
 	},{
 		name: "Soul Drawing",
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In finibus felis sit amet quam interdum, a cursus lectus ultrices. Quisque semper erat at sagittis eleifend. ",
@@ -16,26 +16,26 @@ var services = [
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In finibus felis sit amet quam interdum, a cursus lectus ultrices. Quisque semper erat at sagittis eleifend. ",
 		faIcon: "fa-paint-brush ",
 		faIconBase: "fa-user",
-		color: "#CCCC00"
+		color: "#33CC33"//"#CCCC00"
 	},{
 		name: "Aura Alchemy Process",
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In finibus felis sit amet quam interdum, a cursus lectus ultrices. Quisque semper erat at sagittis eleifend. ",
 		faIcon: "fa-diamond",
 		faIconBase: "fa-sun-o",
-		color: "#33CC33"
+		color: "#33CCCC"
 	},{
 		name: "Sound Healing",
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In finibus felis sit amet quam interdum, a cursus lectus ultrices. Quisque semper erat at sagittis eleifend. ",
-		faIcon: "fa-heartbeat",
-		faIconBase: "fa-heart",
-		color: "#33CCCC"
-	},{
-		name: "Chat Healing",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In finibus felis sit amet quam interdum, a cursus lectus ultrices. Quisque semper erat at sagittis eleifend. ",
-		faIcon: "fa-comments-o",
-		faIconBase: "fa-heart",
+		faIcon: "fa-music",
+		faIconBase: "fa-heartbeat",
 		color: "#3366FF"
 	},{
+	// 	name: "Chat Healing",
+	// 	description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In finibus felis sit amet quam interdum, a cursus lectus ultrices. Quisque semper erat at sagittis eleifend. ",
+	// 	faIcon: "fa-comments-o",
+	// 	faIconBase: "fa-heart",
+	// 	color: "#3366FF"
+	// },{
 		name: "Reiki",
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In finibus felis sit amet quam interdum, a cursus lectus ultrices. Quisque semper erat at sagittis eleifend. ",
 		faIcon: "fa-hand-paper-o",
