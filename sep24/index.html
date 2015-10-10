@@ -41,15 +41,6 @@
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<!-- Angular -->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-		<!-- Matjax (for latex) -->
-		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-		<script type="text/x-mathjax-config">
-			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-			MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
-		</script>
-		<!-- Pie charts -->
-		<script type="text/javascript" src="http://rendro.github.io/easy-pie-chart/javascripts/jquery.easy-pie-chart.js"></script>
-		<link rel="stylesheet" href="http://rendro.github.io/easy-pie-chart/stylesheets/jquery.easy-pie-chart.css">
 		<!-- Google font -->
 		<link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Poiret+One:100,400' rel='stylesheet' type='text/css'>
@@ -113,12 +104,6 @@
 									<br>{{e.description}}
 								</div>
 							</a>
-							<h3>My Skills</h3>
-							<div ng-repeat="c in skillCharts">
-								<div class="chart" data-percent="{{c.percent}}" data-color="{{c.color}}">
-									{{c.name}}
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -164,10 +149,7 @@
 						<a href="https://www.facebook.com/alan.doomri" target="_blank"><i class="fa fa-facebook-official"></i></a>
 						<a href="mailto:alan@something.com"><i class="fa fa-envelope-square"></i></a>
 					</div>
-					<br><br>
-					<span title="Happy Birthday! :3">
-						$\int -[\alpha_{pp}\lambda \cdot \beta_ir+h\partial a^y]$
-					</span>
+
 				</div>
 				<div style="margin:10%"> </div>
 				<div class="container color-black">
