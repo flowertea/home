@@ -84,8 +84,62 @@ window.onresize = function(){
 	refreashMenuHighlight();
 }
 
+var formShowing = false;
+
+function postBooking(data, callback){
+	$.ajax({
+       type: "POST",
+       url: "https://sheetsu.com/apis/97c61c43",
+       data: data })
+    .done(function(res) {
+		callback();
+	})
+	.fail(function(res) {
+		alert("Service Error. Please contact me by email or Skype for your booking.");
+	});
+}
+
 $(function(){
 	$('#side-menu').hide();
 	populateBG();
 	populateCache();
+	// form
+	$('.book-toggle-btn').each(function(){
+		$(this).click(function(){
+			$("html, body").animate({ scrollTop: "0px" }, 300, function(){
+				if(!formShowing){
+					formShowing = true;
+					$('#form-hide').fadeOut('fast', function(){
+						$('#bookingForm-display').fadeIn('fast');
+					});
+				}
+			});
+		})
+	});
+	$('#cancel-book-btn').click(function(){
+		if(formShowing){
+			formShowing = false;
+			$('#bookingForm-display').fadeOut('fast', function(){
+				$('#form-hide').fadeIn('fast');
+			});
+		}
+	});
+
+	$('#bookingForm').submit(function(){
+		$(this).attr('disabled','disabled');
+		var data = $('#bookingForm').serialize();
+		console.log(data);
+		postBooking(data, function(){
+			$('#bookingForm-display').fadeOut('fast', function(){
+				$("#success-message").fadeIn('fast');
+				$('#send-book-btn').removeAttr('disabled');
+				window.setTimeout(function(){
+					$("#success-message").fadeOut('fast', function(){
+						$('#form-hide').fadeIn('fast');
+						formShowing = false;
+					});
+				}, 1500);
+			});
+		});
+	});
 }());

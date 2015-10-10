@@ -73,11 +73,34 @@
 		<div id="splash-content-container">
 			<div class="splash-div full-height" data-id="splash1" data-image="assets/images/1.jpg">
 				<div id="splash-title" class="full-center">
-					Whisper in the Waves
-					<div class="splash-subtitle">
-						a step into divinity and full healing
-						<br><br>
-						<a href="#contact"><button type="button" class="btn btn-trans btn-trans-default"><strong>BOOK A SESSION</strong></button></a>
+					<span id="form-hide">
+						Whisper in the Waves
+						<div class="splash-subtitle">
+							a step into divinity and full healing
+							<br><br>
+							<button type="button" class="btn btn-trans btn-trans-default book-toggle-btn"><strong>BOOK A SESSION</strong></button>
+						</div>
+					</span>
+					<div id="bookingForm-display" class="splash-subtitle">
+						<form id="bookingForm">
+							<div class="row">
+								<label class="col-md-2 text-right">Name:</label>
+								<input class="col-md-9" type="text" name="name" required>
+							</div>
+							<div class="row">
+								<label class="col-md-2 text-right">Message:</label>
+								<textarea class="col-md-9" name="message" placeholder="Tell me about the service that you would like to have and the time you would like to have it." required></textarea>
+							</div>
+							<div class="row">
+								<label class="col-md-2 text-right">Contact:</label>
+								<textarea class="col-md-9" name="contact" maxlength="55" placeholder="Your email, skype username or any other means to get back to you." required></textarea>
+							</div><br>
+							<input type="submit" value="CONFIRM" id="send-book-btn" class="btn btn-trans btn-trans-default" style="font-weight:bold;">
+							<button type="button" id="cancel-book-btn" class="btn btn-trans btn-trans-default"><strong>CANCEL</strong></button>
+						</form>
+					</div>
+					<div id="success-message" class="splash-subtitle">
+						Thanks for booking my service! I will get back to you soon.<br><br>
 					</div>
 				</div>
 			</div>
@@ -90,7 +113,7 @@
 					<div class="col-md-3">
 						<div class="subtitle">Services</div>
 						<p>I offer aura alchemy healing, sound healing, Reiki, telepathic readings, oracle readings, sound healing and soul drawings/paintings. I can offer these services either by Skype or in person if you live in Calgary. All my services are offered in English, French and Spanish. To book a reading just send me a private message or email me.</p>
-						<div class="subtitle"><a href="#contact"><button type="button" class="btn btn-trans btn-trans-default"><strong>BOOK A SESSION</strong></button></a></div>
+						<div class="subtitle"><button type="button" class="btn btn-trans btn-trans-default book-toggle-btn"><strong>BOOK A SESSION</strong></button></div>
 					</div>
 					<div class="col-md-1 backlight" ng-repeat="s in services" data-color="{{s.color}}">
 						<div class="service-icon-sub"><i class="fa {{s.faIconBase}}"></i></div>
@@ -118,7 +141,7 @@
 					</div>
 					<div class="portfolio-last color-black">
 						<p>Soul Drawings are drawings of either your higher self or aspects of you, it could be your guides or one of your past life.</p>
-						<a href="#contact"><button type="button" class="btn btn-trans btn-trans-default"><strong>BOOK A SESSION</strong></button></a>
+						<div class="subtitle"><button type="button" class="btn btn-trans btn-trans-default book-toggle-btn"><strong>BOOK A SESSION</strong></button></div>
 					</div>
 				</div>
 			</div>

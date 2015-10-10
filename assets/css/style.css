@@ -229,3 +229,27 @@ button:focus{
 	font-size: 60px;
 	text-align: right;
 }
+
+#bookingForm input[type=text], #bookingForm textarea {
+    background-color: transparent;
+    padding: 15px;
+    border:0;
+    border-bottom: solid rgba(255,255,255,0.4) 1px;
+    padding: 2px 5px; 
+    font-family: 'Raleway';
+    color:white;
+    font-size: 20px;
+}
+
+#bookingForm input[type=text]:focus, #bookingForm textarea:focus {
+	outline: 0; 
+	background-color: transparent;
+}
+
+#bookingForm-display, #success-message{
+	display:none;
+}
+
+.row{
+	margin:0;
+}
