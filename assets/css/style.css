@@ -1,7 +1,6 @@
 /*color scheme
-	background: #3D1F00 (brown);
 	contrast: #CC66FF (purple);
-	highlight: #00CC99 (turquois);
+	highlight: ##6699FF (blue);
 */
 
 body{
@@ -12,7 +11,7 @@ body{
 }
 
 .color-black{
-	background-color:rgba(0,0,0, 0.6);
+	background-color:rgba(0,0,0, 0.8);
 }
 
 #side-menu{
@@ -135,7 +134,7 @@ body{
 }
 
 .contact-links a:hover{
-	color:#00CC99;
+	color:#CC66FF;
 }
 
 h2, h3{
@@ -207,4 +206,26 @@ button:focus{
 
 .portfolio-title, .portfolio-image-title{
 	font-family: 'Poiret One', cursive;
+}
+
+.service-icon{
+	text-align: center;
+	font-size: 35px;
+	margin-top:-75px;
+	margin-right:-25px;
+	color:white;
+}
+
+.service-icon-sub{
+	margin-top:20px;
+	margin-right:4px;
+	text-align: center;
+	font-size: 60px;
+	color:rgba(225,225,225,0.5);
+}
+
+.subtitle{
+	font-family: 'Poiret One', cursive;
+	font-size: 60px;
+	text-align: right;
 }

@@ -64,7 +64,7 @@
 	<body>
 		<div id="splash-bg-container"></div>
 		<div id="side-menu">
-			<a href="#about"><div id="splash2">Services</div></a>
+			<a href="#services"><div id="splash2">Services</div></a>
 			<a href="#drawings"><div id="splash3">Drawings</div></a>
 			<a href="#contact"><div id="splash5">About Me</div></a>
 			<a><div>Testimonials</div></a>
@@ -82,15 +82,31 @@
 				</div>
 			</div>
 
-			<a name="about"></a>
+			<a name="services"></a>
 			<div class="splash-div min-full-height" data-id="splash2" data-image="assets/images/2.jpg">
-
+				<div class="row color-black" ng-controller="viewCtrl" style="margin:0;">
+					<div class="subtitle col-md-1">
+					</div>
+					<div class="col-md-3">
+						<div class="subtitle">Services</div>
+						<p>I offer aura alchemy healing, sound healing, Reiki, telepathic readings, oracle readings, sound healing and soul drawings/paintings. I can offer these services either by Skype or in person if you live in Calgary. All my services are offered in English, French and Spanish. To book a reading just send me a private message or email me.</p>
+						<div class="subtitle"><a href="#contact"><button type="button" class="btn btn-trans btn-trans-default"><strong>BOOK A SESSION</strong></button></a></div>
+					</div>
+					<div class="col-md-1 backlight" ng-repeat="s in services" data-color="{{s.color}}">
+						<div class="service-icon-sub"><i class="fa {{s.faIconBase}}"></i></div>
+						<div class="service-icon"><i class="fa {{s.faIcon}}"></i></div>
+						<h3>{{s.name}}</h3>
+						<p>{{s.description}}</p>
+					</div>
+					<div class="col-md-1">
+					</div>
+				</div>
 			</div>
 
 			<a name="drawings"></a>
 			<div class="splash-div" data-id="splash3" data-image="assets/images/3.jpg">
 				<div class="portfolio" ng-controller="viewCtrl">
-					<div class="portfolio-title">
+					<div class="portfolio-title color-black">
 						<div class="portfolio-buttom-align">Sample<br>Drawings</div>
 					</div>
 					<div class="portfolio-image" ng-repeat="d in drawings"
@@ -100,29 +116,30 @@
 							<div class="portfolio-image-description">{{d.description}}</div>
 						</div>
 					</div>
-					<div class="portfolio-last">Soul Drawings are drawings of either your higher self or aspects of you, it could be your guides or one of your past life. I will intuitvely ask your guides to give me an image that will help you in this moment. This drawing has a frequency that is healing for you at this time. Sometimes I will add messages from your guides to the drawing as well. It is good to meditate with them.</div>
+					<div class="portfolio-last color-black">
+						<p>Soul Drawings are drawings of either your higher self or aspects of you, it could be your guides or one of your past life.</p>
+						<a href="#contact"><button type="button" class="btn btn-trans btn-trans-default"><strong>BOOK A SESSION</strong></button></a>
+					</div>
 				</div>
 			</div>
 
 			<a name="contact"></a>
-			<div class="splash-div full-height" data-id="splash5" data-image="assets/images/4.jpg">
-				<div style="margin:10%"></div>
+			<div class="splash-div min-full-height" data-id="splash5" data-image="assets/images/4.jpg">
+				<div style="margin:15%"></div>
 				<div class="container color-black">
 					<div class="row">
 						<div class="col-md-4">
 							<center><img class="circle-image" src="assets/images/profile.jpg"></center>
-							<h3>About Me</h3>
-							<p>My mission is to help people around the world to step into their divinity and full healing.</p>
 						</div>
 						<div class="col-md-8" ng-controller="viewCtrl">
-							<h3>Contact Me</h3>
-							<p>I offer aura alchemy healing, sound healing, Reiki, telepathic readings, oracle readings, sound healing and soul drawings/paintings. I can offer these services either by Skype or in person if you live in Calgary. All my services are offered in English, French and Spanish. To book a reading just send me a private message or email me.</p>
+							<div class="subtitle">Mariana Claire</div>
+							<h3>About Me</h3>
+							<p>My mission is to help people around the world to step into their divinity and full healing.</p>
 							<div class="contact-links">
 								<a href="https://www.facebook.com/Whisper-in-the-Waves-1484113901885029/" target="_blank"><i class="fa fa-facebook-official"></i></a>
 								<a href="skype:Marianas521?userinfo" title="Marianas521"><i class="fa fa-skype"></i></a>
 								<a href="mailto:mseoane52@gmail.com" title="mseoane52@gmail.com"><i class="fa fa-envelope"></i></a>
 							</div>
-							<h1>Mariana Claire</h1>
 						</div>
 					</div>
 				</div>
@@ -136,6 +153,7 @@
 	<!-- My script :3 -->
 	<script src="assets/scripts/services.js"> </script>
 	<script src="assets/scripts/drawings.js"> </script>
+	<script src="assets/scripts/backlight.js"> </script>
 	<script src="assets/scripts/portfolio.js"> </script>
 	<script src="assets/scripts/script.js"> </script>
 </html>

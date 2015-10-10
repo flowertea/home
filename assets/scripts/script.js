@@ -6,6 +6,7 @@ function viewCtrl($scope) {
 
 	$scope.refresh = function() {
 		window.setTimeout(function(){
+			initBacklight();
 			initPortfolio();
 		}, 500);
 	};
