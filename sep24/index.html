@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--
+	Designed by GOLDENRATIPHI
+
+       ,(&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    @          @@@@     #@     @@@    @@                                                      @
+    @       @@          %@        @@  @&                                                      @
+    @    @@@            ,@          @ @(                                                      @
+    @   @@               @           @@.                                                      @
+    @ @@                 @            @                                                       @
+    @@@                  @            @                                                      @@
+    @@                   @####@@      @                                                      @@
+    @,                   @    @       @                                                     @@@
+    @                    @@@  @     @@@                                                     @ @
+    @                    @  @@@@  @@@ @                                                    @  @
+    @                                 @                                                   @.  @
+    @                                 @                                                  @@   @
+    @                                 @                                                 @@    @
+    @                                 @                                                @@     @
+    @@                                @                                               @       @
+    @@                                @                                             @@        @
+    @ @                               @                                            @@         @
+    @  @                              @                                          @@           @
+    @   @                             @                                        @@             @
+    @    @                            @                                      @@               @
+    @     @@                          @                                    @@                 @
+    @       @                         @                                 @@                    @
+    @         @                       @                              @@                       @
+    @           @@                    @(                         #@@                          @
+    @              @@                 @@                     @@@                              @
+    @                 @@@             @@               @@@@                                   @
+    @                     *@@@@@      @@      @@@@@@@                                         @
+																	@ ytixu.github.io/HTMLdump
+
+
+-->
+<html data-ng-app lang="en">
+	<head>
+		<title>Whisper in the Waves</title>
+		<!-- jQuery -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<!-- Angular -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+		<!-- Matjax (for latex) -->
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+			MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+		</script>
+		<!-- Pie charts -->
+		<script type="text/javascript" src="http://rendro.github.io/easy-pie-chart/javascripts/jquery.easy-pie-chart.js"></script>
+		<link rel="stylesheet" href="http://rendro.github.io/easy-pie-chart/stylesheets/jquery.easy-pie-chart.css">
+		<!-- Google font -->
+		<link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Poiret+One:100,400' rel='stylesheet' type='text/css'>
+
+		<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway:100,400' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:900' rel='stylesheet' type='text/css'>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- Icons -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+		<!-- My style :3 -->
+		<link rel="stylesheet" href="style.css">
+
+		<style type="text/css">
+			/*[data-sr] { visibility: hidden; }*/
+		</style>
+	</head>
+	<body>
+		<div id="splash-bg-container"></div>
+		<div id="side-menu">
+			<a href="#about"><div id="splash2">My Services</div></a>
+			<a href="#projects"><div id="splash3">tmep</div></a>
+			<a href="#contact"><div id="splash5">About Me</div></a>
+		</div>
+		<div id="splash-content-container">
+			<div class="splash-div full-height" data-id="splash1" data-image="images/1.jpg">
+				<div id="splash-title" class="full-center">
+					Whisper in the Waves
+					<div class="splash-subtitle">
+						a step into divinity and full healing
+						<br><br>
+						<a href="#contact"><button type="button" class="btn btn-trans btn-trans-default"><strong>BOOK A SESSION</strong></button></a>
+					</div>
+				</div>
+			</div>
+
+			<a name="about"></a>
+			<div class="splash-div" data-id="splash2" data-image="images/2.jpg">
+				<div class="container color-black">
+					<div class="row">
+						<div class="col-md-4">
+							<center><img class="circle-image" src="images/profile.jpg" title="When I was 7 years old!"></center>
+							<h3>My Story</h3>
+							<p>	Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent id tempor ipsum. Fusce at massa ac nunc porta fringilla sed eget neque. Quisque quis pretium nulla. Fusce eget bibendum neque, vel volutpat augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+						</div>
+						<div class="col-md-8" ng-controller="viewCtrl">
+							<h3>My Background</h3>
+							<a class="anchor-no-style" ng-repeat="e in experience" target="_blank" href="{{e.url}}">
+								<div class="hover-hightlight">
+									<div class="row">
+										<div class="col-xs-8">
+											<i class="fa {{e.faIcon}}"></i> <strong>{{e.name}}</strong>
+										</div>
+										<div class="col-xs-4 text-right">
+											{{e.time}}
+										</div>
+									</div>
+									<i>{{e.location}}</i>
+									<br>{{e.description}}
+								</div>
+							</a>
+							<h3>My Skills</h3>
+							<div ng-repeat="c in skillCharts">
+								<div class="chart" data-percent="{{c.percent}}" data-color="{{c.color}}">
+									{{c.name}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<a name="projects"></a>
+			<div class="splash-div" data-id="splash3" data-image="images/3.jpg">
+				<div class="container color-black">
+					<h3>My Projects</h3>
+					<div class="row" ng-controller="viewCtrl">
+						<a class="anchor-no-style" ng-repeat="p in projects"
+							ng-init="$last ? refresh() : null"
+							href="{{p.url}}" target="_blank">
+							<div class="col-md-4 hover-hightlight">
+								<div class="square-img" style="background-image:url('{{p.image}}');"></div>
+								<br>
+								<div class="row">
+									<div class="col-xs-8">
+										<strong>{{p.name}}</strong>
+									</div>
+									<div class="col-xs-4 text-right">
+										{{p.time}}
+									</div>
+								</div>
+								<i>{{p.location}}</i>
+								<p>{{p.description}}
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<a name="contact"></a>
+			<div class="splash-div full-height" data-id="splash5" data-image="images/4.jpg">
+				<div style="margin:10%"> </div>
+				<div class="container text-center">
+					<h2 class="full-center">Let's Team Up</h2>
+					<div class="splash-subtitle">and change the world!</div>
+					<br>
+					<div class="contact-links">
+						<a href="https://www.facebook.com/alan.doomri" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+						<a href="https://www.facebook.com/alan.doomri" target="_blank"><i class="fa fa-github-square"></i></a>
+						<a href="https://www.facebook.com/alan.doomri" target="_blank"><i class="fa fa-facebook-official"></i></a>
+						<a href="mailto:alan@something.com"><i class="fa fa-envelope-square"></i></a>
+					</div>
+					<br><br>
+					<span title="Happy Birthday! :3">
+						$\int -[\alpha_{pp}\lambda \cdot \beta_ir+h\partial a^y]$
+					</span>
+				</div>
+				<div style="margin:10%"> </div>
+				<div class="container color-black">
+					<div class="credit">&copy;Goldenrati&Phi; | 2015</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!-- My script :3 -->
+	<script src="script.js"> </script>
+</html>
