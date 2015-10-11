@@ -24,8 +24,16 @@ body{
 	font-family: 'Poiret One', cursive;
 	font-weight: 100;
 	font-size: 24px;
-	background-color: rgb(204, 102, 255);
+    -webkit-transition: background-color 100ms linear;
+    -moz-transition: background-color 100ms linear;
+    -o-transition: background-color 100ms linear;
+    -ms-transition: background-color 100ms linear;
+    transition: background-color 100ms linear;
 
+}
+
+#side-menu.active {
+    background-color: #CC66FF;
 }
 
 #side-menu div{
@@ -40,8 +48,8 @@ body{
 #side-menu div.active{
 	/*background-color:rgb(255,132,183);*/
 	/*color:black;*/
-	border-bottom-color: white;
-	font-weight: 400;
+	/*border-bottom-color: white;
+	font-weight: 400;*/
 }
 
 .splash-div{
