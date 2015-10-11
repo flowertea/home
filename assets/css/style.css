@@ -167,7 +167,7 @@ h2{
 
 .circle-image{
 	border-radius: 100%;
-	width:61%;
+	width:90%;
 }
 
 .credit{
@@ -262,9 +262,17 @@ button:focus{
 	margin:0;
 }
 
-a{
+a, a:focus, a:active{
+	color:white;
 	cursor: pointer;
 }
+
+a:hover{
+	text-decoration: none;
+	color:#CC66FF;
+}
+
+
 
 td{
 	vertical-align: top;
