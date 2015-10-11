@@ -257,3 +257,8 @@ button:focus{
 a{
 	cursor: pointer;
 }
+
+td{
+	vertical-align: top;
+	padding:10px;
+}
