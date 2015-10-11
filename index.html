@@ -31,12 +31,14 @@
     @                 @@@             @@               @@@@                                   @
     @                     *@@@@@      @@      @@@@@@@                                         @
 																	@ ytixu.github.io/HTMLdump
-
+	IZQ CN QNG HJZVS DQ LVUPGVPZ?
+	FVUUV EGTLC HYGUUTUP FZEHTYZ YNPZYIZR?
+	PZY TU YNGWI VY PNLCZURVYTNZHJ@PDVTL.WND
 
 -->
 <html data-ng-app lang="en">
 	<head>
-		<title>Whisper in the Waves</title>
+		<title>Mariana Claire</title>
 		<!-- jQuery -->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<!-- Angular -->
@@ -45,9 +47,6 @@
 		<link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Poiret+One:100,400' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-
-		<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:900' rel='stylesheet' type='text/css'>
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<!-- Icons -->
@@ -67,15 +66,15 @@
 			<a data-id="services" class="menu-slide-btn"><div id="splash2">Services</div></a>
 			<a data-id="drawings" class="menu-slide-btn"><div id="splash3">Drawings</div></a>
 			<a data-id="contact" class="menu-slide-btn"><div id="splash5">About Me</div></a>
-			<a><div>Testimonials</div></a>
-			<a><div>Blog</div></a>
-			<a><div class="book-toggle-btn">Book</div></a>
+			<a data-id="testimonials" class="menu-slide-btn"><div id="splash6">Testimonials</div></a>
+			<!-- <a href="https://medium.com/@MarianaClaire" target="_blank"><div>Blog</div></a> -->
+			<a><div class="book-toggle-btn">Book Service</div></a>
 		</div>
 		<div id="splash-content-container">
 			<div class="splash-div full-height" data-id="splash1" data-image="assets/images/1.jpg">
 				<div id="splash-title" class="full-center">
 					<span id="form-hide">
-						Whisper in the Waves
+						Mariana Claire
 						<div class="splash-subtitle">
 							a step into divinity and full healing
 							<br><br>
@@ -109,23 +108,56 @@
 			<a name="services"></a>
 			<div class="splash-div min-full-height" data-id="splash2" data-image="assets/images/2.jpg">
 				<div class="row color-black" ng-controller="viewCtrl" style="margin:0;">
-					<div class="subtitle col-md-1">
-					</div>
-					<div class="col-md-3">
+					<div class="col-lg-3 col-md-5 col-sm-12">
 						<div class="subtitle">Services</div>
-						<p>I offer aura alchemy healing, sound healing, Reiki, telepathic readings, oracle readings, sound healing and soul drawings/paintings. I can offer these services either by Skype or in person if you live in Calgary. All my services are offered in English, French and Spanish. To book a reading just send me a private message or email me.</p>
-						<div class="subtitle"><button type="button" class="btn btn-trans btn-trans-default book-toggle-btn"><strong>BOOK A SESSION</strong></button></div>
+						<div class="row">
+							<div class="col-md-12">I offer aura alchemy healing, sound healing, Reiki, telepathic readings, oracle readings, sound healing and soul drawings/paintings.
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-lg-12 col-md-4 col-sm-4 col-xs-4 text-md-right">
+								<strong>Language</strong></div>
+							<div class="col-lg-12 col-md-8 col-sm-8 col-xs-8">Available in English, French and Spanish</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-lg-12 col-md-4 col-sm-4 col-xs-4 text-md-right">
+								<strong>Location</strong></div>
+							<div class="col-lg-12 col-md-8 col-sm-8 col-xs-8">
+								Skype or in person if you live in Calgary</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-lg-12 col-md-4 col-sm-4 col-xs-4 text-md-right">
+								<strong>Payment</strong></div>
+							<div class="col-lg-12 col-md-8 col-sm-8 col-xs-8"><i class="fa fa-paypal"></i> Paypal to my email: marianaclaireinfo@gmail.com
+								<ul>
+									<li>45$ for 30 mins</li>
+									<li>67$ for 45 mins</li>
+									<li>89$ for 1 hour</li>
+									<li>112$ for 75 mins</li>
+									<li>135$ for 90 mins</li>
+									<li>and 60$ for a soul drawing + shipping</li>
+								</ul>
+							</div>
+						</div>
+ 						<div class="subtitle"><button type="button" class="btn btn-trans btn-trans-default book-toggle-btn"><strong>BOOK A SESSION</strong></button></div>
 					</div>
-					<div class="col-md-1 backlight" ng-repeat="s in services" data-color="{{s.color}}">
-						<div class="service-icon-sub"><i class="fa {{s.faIconBase}}"></i></div>
-						<div class="service-icon"><i class="fa {{s.faIcon}}"></i></div>
-						<h3>{{s.name}}</h3>
-						<p>{{s.description}}</p>
+					<div class="col-lg-9 col-md-7 col-sm-12">
+						<div class="row">
+							<div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 backlight" ng-repeat="s in services" data-color="{{s.color}}">
+								<div class="service-icon-sub"><i class="fa {{s.faIconBase}}"></i></div>
+								<div class="service-icon"><i class="fa {{s.faIcon}}"></i></div>
+								<h3>{{s.name}}</h3>
+								<p>{{s.description}}</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-md-1">
-					</div>
+					<br>
 				</div>
 			</div>
+			<div style="margin:5%"></div>
 
 			<a name="drawings"></a>
 			<div class="splash-div" data-id="splash3" data-image="assets/images/3.jpg">
@@ -141,29 +173,63 @@
 						</div>
 					</div>
 					<div class="portfolio-last color-black">
+						<br>
 						<p>Soul Drawings are drawings of either your higher self or aspects of you, it could be your guides or one of your past life.</p>
-						<div class="subtitle"><button type="button" class="btn btn-trans btn-trans-default book-toggle-btn"><strong>BOOK A SESSION</strong></button></div>
+						<div class="subtitle"><button type="button" class="btn btn-trans btn-trans-default book-toggle-btn"><strong>PURCHASE A DRAWING</strong></button></div>
 					</div>
 				</div>
 			</div>
 
 			<a name="contact"></a>
-			<div class="splash-div min-full-height" data-id="splash5" data-image="assets/images/4.jpg">
-				<div style="margin:15%"></div>
+			<div class="splash-div" data-id="splash5" data-image="assets/images/4.jpg">
+				<div style="margin:5%"></div>
 				<div class="container color-black">
 					<div class="row">
 						<div class="col-md-4">
 							<center><img class="circle-image" src="assets/images/profile.jpg"></center>
 						</div>
 						<div class="col-md-8" ng-controller="viewCtrl">
-							<div class="subtitle">Mariana Claire</div>
-							<h3>About Me</h3>
+							<div class="subtitle">About Me</div>
 							<p>My mission is to help people around the world to step into their divinity and full healing.</p>
+							<h3>My Story</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In finibus felis sit amet quam interdum, a cursus lectus ultrices. Quisque semper erat at sagittis eleifend.</p>
 							<div class="contact-links">
-								<a href="https://www.facebook.com/Whisper-in-the-Waves-1484113901885029/" target="_blank"><i class="fa fa-facebook-official"></i></a>
+								<a href="https://www.facebook.com/Mariana-Claire-1484113901885029/" target="_blank"><i class="fa fa-facebook-official"></i></a>
 								<a href="skype:Marianas521?userinfo" title="Marianas521"><i class="fa fa-skype"></i></a>
-								<a href="mailto:mseoane52@gmail.com" title="mseoane52@gmail.com"><i class="fa fa-envelope"></i></a>
+								<a href="mailto:marianaclaireinfo@gmail.com" title="marianaclaireinfo@gmail.com"><i class="fa fa-envelope"></i></a>
 							</div>
+							<h3>Comming Soon</h3>
+							<p>I will start writing blog and posting videos. Subscribe now to be the first one to know when the first entries are up.
+							<div class="contact-links">
+								<a href="https://medium.com/@MarianaClaire" target="_blank"><i class="fa fa-medium"></i></a>
+								<a href="https://www.youtube.com/channel/UCECj3HY7vZ1-oAdtYjU1U-Q" target="_blank"><i class="fa fa-youtube"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a name="testimonials"></a>
+			<div class="splash-div" data-id="splash5" data-image="assets/images/4.jpg">
+				<div class="container color-black">
+					<div class="row">
+						<div class="col-md-8">
+							<div class="subtitle">Testimonials</div>
+							<div id="testimonial-display">
+								<span class="current"></span>/<span class="total"></span>
+								<blockquote>
+
+								</blockquote>
+								<div class="text-right">
+									~ by <span class="author"></span> - <span class="time"></span>
+								</div>
+							</div>
+							<div class="subtitle"><button type="button" id="more-test-btn" class="btn btn-trans btn-trans-default"><strong>READ ANOTHER ONE</strong></button></div>
+						</div>
+						<div class="col-md-4">
+							<div class="fb-page" data-href="https://www.facebook.com/Mariana-Claire-1484113901885029/timeline/" data-width="100%" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"></div>
+							<div id="fb-root"></div>
+							<h3>Write a Testimonial</h3>
+							<p>If you would like to write a testiminial after recieving one of my service, please post it on the <a href="https://www.facebook.com/Mariana-Claire-1484113901885029/" target="_blank">facebook page</a>.</p>
 						</div>
 					</div>
 				</div>
@@ -174,9 +240,17 @@
 			</div>
 		</div>
 	</body>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 	<!-- My script :3 -->
 	<script src="assets/scripts/services.js"> </script>
 	<script src="assets/scripts/drawings.js"> </script>
+	<script src="assets/scripts/test.js"> </script>
 	<script src="assets/scripts/backlight.js"> </script>
 	<script src="assets/scripts/portfolio.js"> </script>
 	<script src="assets/scripts/script.js"> </script>
