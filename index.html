@@ -31,8 +31,8 @@
     @                 @@@             @@               @@@@                                   @
     @                     *@@@@@      @@      @@@@@@@                                         @
 																	@ ytixu.github.io/HTMLdump
-	IZQ CN QNG HJZVS DQ LVUPGVPZ? 
-	FVUUV EGTLC HYGUUTUP FZEHTYZ YNPZYIZR? 
+	IZQ CN QNG HJZVS DQ LVUPGVPZ?
+	FVUUV EGTLC HYGUUTUP FZEHTYZ YNPZYIZR?
 	PZY TU YNGWI VY PNLCZURVYTNZHJ@PDVTL.WND
 
 -->
@@ -111,42 +111,48 @@
 			<a name="services"></a>
 			<div class="splash-div min-full-height" data-id="splash2" data-image="assets/images/2.jpg">
 				<div class="row color-black" ng-controller="viewCtrl" style="margin:0;">
-					<div class="subtitle col-md-1">
-					</div>
-					<div class="col-md-3">
+					<div class="col-lg-3 col-md-5 col-sm-12">
 						<div class="subtitle">Services</div>
-						<table>
-							<tr><td>Language</td>
-								<td>Available in English, French and Spanish</td>
-							</tr>
-							<tr><td>Location</td>
-								<td>Skype or in person if you live in Calgary</td>
-							</tr>
-							<tr><td>Payment</td>
-								<td>Paypal to my email: mseoane52@gmail.com
-									<ul>
-										<li>45$ for 30 mins</li>
-										<li>67$ for 45 mins</li>
-										<li>89$ for 1 hour</li>
-										<li>112$ for 75 mins</li>
-										<li>135$ for 90 mins</li>
-										<li>and 60$ for a soul drawing + shipping</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<div class="subtitle"><button type="button" class="btn btn-trans btn-trans-default book-toggle-btn"><strong>BOOK A SESSION</strong></button></div>
+						<div class="row">
+							<div class="col-lg-12 col-md-4 col-sm-4 col-xs-4 text-md-right">
+								<strong>Language</strong></div>
+							<div class="col-lg-12 col-md-8 col-sm-8 col-xs-8">Available in English, French and Spanish</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 col-md-4 col-sm-4 col-xs-4 text-md-right">
+								<strong>Location</strong></div>
+							<div class="col-lg-12 col-md-8 col-sm-8 col-xs-8">
+								Skype or in person if you live in Calgary</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 col-md-4 col-sm-4 col-xs-4 text-md-right">
+								<strong>Payment</strong></div>
+							<div class="col-lg-12 col-md-8 col-sm-8 col-xs-8"><i class="fa fa-paypal"></i> Paypal to my email: mseoane52@gmail.com
+								<ul>
+									<li>45$ for 30 mins</li>
+									<li>67$ for 45 mins</li>
+									<li>89$ for 1 hour</li>
+									<li>112$ for 75 mins</li>
+									<li>135$ for 90 mins</li>
+									<li>and 60$ for a soul drawing + shipping</li>
+								</ul>
+							</div>
+						</div>
+ 						<div class="subtitle"><button type="button" class="btn btn-trans btn-trans-default book-toggle-btn"><strong>BOOK A SESSION</strong></button></div>
 					</div>
-					<div class="col-md-1 backlight" ng-repeat="s in services" data-color="{{s.color}}">
-						<div class="service-icon-sub"><i class="fa {{s.faIconBase}}"></i></div>
-						<div class="service-icon"><i class="fa {{s.faIcon}}"></i></div>
-						<h3>{{s.name}}</h3>
-						<p>{{s.description}}</p>
-					</div>
-					<div class="col-md-1">
+					<div class="col-lg-9 col-md-7 col-sm-12">
+						<div class="row">
+							<div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 backlight" ng-repeat="s in services" data-color="{{s.color}}">
+								<div class="service-icon-sub"><i class="fa {{s.faIconBase}}"></i></div>
+								<div class="service-icon"><i class="fa {{s.faIcon}}"></i></div>
+								<h3>{{s.name}}</h3>
+								<p>{{s.description}}</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
+			<div style="margin:5%"></div>
 
 			<a name="drawings"></a>
 			<div class="splash-div" data-id="splash3" data-image="assets/images/3.jpg">

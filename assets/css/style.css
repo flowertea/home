@@ -243,14 +243,14 @@ button:focus{
     padding: 15px;
     border:0;
     border-bottom: solid rgba(255,255,255,0.4) 1px;
-    padding: 2px 5px; 
+    padding: 2px 5px;
     font-family: 'Raleway';
     color:white;
     font-size: 20px;
 }
 
 #bookingForm input[type=text]:focus, #bookingForm textarea:focus {
-	outline: 0; 
+	outline: 0;
 	background-color: transparent;
 }
 
@@ -271,6 +271,13 @@ td{
 	padding:10px;
 }
 
-#testimonial-display{
+.text-md-right{
+	margin-left:10px;
+}
 
+@media screen and (max-width: 1200px) {
+	.text-md-right{
+		text-align: right;
+		margin-left:0;
+	}
 }
