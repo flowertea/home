@@ -3,7 +3,7 @@ var testimonials = {
 	length: 0,
 	data: [{
 		user: 'L. Jewell Johnson',
-		message: 'I love your validation that \'all I need to do is remember\' Mariana Claire! and all the wonderful source aspect, life purpose, negative imprint clarifications for me to explore and connect with an integrate into my authentic being.. infinite divine love, light and blessings to you precious on.',
+		message: 'I love your validation that "all I need to do is remember" Mariana Claire! and all the wonderful source aspect, life purpose, negative imprint clarifications for me to explore and connect with an integrate into my authentic being.. infinite divine love, light and blessings to you precious on.',
 		date: '10/11/2015',
 	},{
 		user: 'Lygia Romou-Osorio Lobato',
