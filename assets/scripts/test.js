@@ -2,6 +2,14 @@ var testimonials = {
 	index: -1,
 	length: 0,
 	data: [{
+		user: 'Lygia Romou-Osorio Lobato',
+		message: 'Thank you Mariana Claire, for your reading. You were very fast and on point.',
+		date: '10/11/2015',
+	},{
+		user: 'L. Jewell Johnson',
+		message: 'I love your validation that \'all I need to do is remember\' Mariana Claire! and all the wonderful source aspect, life purpose, negative imprint clarifications for me to explore and connect with an integrate into my authentic being.. infinite divine love, light and blessings to you precious on.',
+		date: '10/11/2015',
+	},{
 		user: 'Erin Aslan',
 		message: 'I had an aura and soul origin reading with Mariana and I am very impressed by it. Mariana is a gifted psychic who answered my questions right away and channeled my guides directly. Finding out my roots gave me a clear understanding of my soul aspects and my aura reading confirmed my spiritual purpose and development. I believe having such a reading is a must for any spritual/non spiritual person who is looking for her direction in life. And I highly recommend Mariana for this reading, because she is a very kind, loving and gifted person with an absolutely professional attitute.',
 		date: '10/10/2015',

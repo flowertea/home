@@ -110,12 +110,12 @@ function postBooking(data, callback){
 }
 
 function getCurrentDateTime(){
-	var currentdate = new Date(); 
+	var currentdate = new Date();
 	return  currentdate.getDate() + "/"
-            + (currentdate.getMonth()+1)  + "/" 
-            + currentdate.getFullYear() + " "  
-            + currentdate.getHours() + ":"  
-            + currentdate.getMinutes() + ":" 
+            + (currentdate.getMonth()+1)  + "/"
+            + currentdate.getFullYear() + " "
+            + currentdate.getHours() + ":"
+            + currentdate.getMinutes() + ":"
             + currentdate.getSeconds();
 }
 
