@@ -1,4 +1,12 @@
 // angular
+var app = angular.module('app', []);
+
+angular.module('app')
+    .filter('to_trusted', ['$sce', function($sce){
+        return function(text) {
+            return $sce.trustAsHtml(text);
+        };
+    }]);
 
 function viewCtrl($scope) {
 	$scope.services = services;

@@ -19,7 +19,7 @@ var services = [
 		color: "#33CC33"//"#CCCC00"
 	},{
 		name: "Aura Alchemy Process",
-		description: "I am a facilitator of Pamela Aaralyn’s Aura Alchemy process. This is a process of integration and shadow work that transmutes the negative imprints of a person into the feelings that her inner child would like to feel instead. To learn more about this process please read <a href='http://www.aurareader.com/1/post/2015/03/walking-in-the-light-of-the-shadow-body-aura-alchemy-process.html' target='_blank'>Pamela’s blog</a>.",
+		description: "I am a facilitator of Pamela Aaralyn's Aura Alchemy process. This is a process of integration and shadow work that transmutes the negative imprints of a person into the feelings that her inner child would like to feel instead. To learn more about this process please read <a href='http://www.aurareader.com/1/post/2015/03/walking-in-the-light-of-the-shadow-body-aura-alchemy-process.html' target='_blank'>Pamela's blog</a>.",
 		faIcon: "fa-diamond",
 		faIconBase: "fa-sun-o",
 		color: "#33CCCC"
