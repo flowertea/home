@@ -1,3 +1,14 @@
+// parse URL to get language
+var validLangs = ["ENG", "FREN", "ESP"]
+function parseURL(){
+	var args = window.location.href.split('#');
+	if (args.length > 1 && validLangs.indexOf(args[1]) > 0){
+		return args[1];
+	}
+	return "ENG";
+}
+var currentLang = parseURL();
+
 // angular
 var app = angular.module('app', []);
 
@@ -9,8 +20,12 @@ angular.module('app')
     }]);
 
 function viewCtrl($scope) {
+	$scope.languageOpt = currentLang;
 	$scope.services = services;
 	$scope.drawings = drawingsDB.drawings;
+	$scope.story = story;
+	$scope.serviceText = serviceText;
+	$scope.sampleDrawing = sampleDrawing;
 
 	$scope.refresh = function() {
 		window.setTimeout(function(){
@@ -19,6 +34,12 @@ function viewCtrl($scope) {
 			$('#side-menu').slideDown('slow');
 		}, 500);
 	};
+
+	$scope.changeLang = function(lang){
+		// window.location.href = "./#"+lang;
+		window.open('./#'+lang, "_parent");
+		window.location.reload();
+	}
 }
 
 
@@ -131,6 +152,10 @@ $(function(){
 	$('#side-menu').hide();
 	populateBG();
 	populateCache();
+	//language
+	$('.lang-'+currentLang).css({
+		'display': 'inline-block'
+	});
 
 	//slide btn
 	$('.menu-slide-btn').each(function(){
