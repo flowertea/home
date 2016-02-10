@@ -1,16 +1,64 @@
+// parse URL to get language
+var validLangs = ["ENG", "FREN", "ESP"]
+function parseURL(){
+	var args = window.location.href.split('#');
+	if (args.length > 1 && validLangs.indexOf(args[1]) > 0){
+		return args[1];
+	}
+	return "ENG";
+}
+var currentLang = parseURL();
+
 // angular
+var app = angular.module('app', []);
+
+angular.module('app')
+    .filter('to_trusted', ['$sce', function($sce){
+        return function(text) {
+            return $sce.trustAsHtml(text);
+        };
+    }]);
 
 function viewCtrl($scope) {
+	$scope.languageOpt = currentLang;
 	$scope.services = services;
-	$scope.drawings = drawingsDB.drawings;
+	$scope.drawings = drawingsDB;
+	$scope.story = story;
+	$scope.serviceText = serviceText;
+	$scope.sampleDrawing = sampleDrawing;
+	$scope.formValues = formValues;
+	$scope.titles = titles;
+	$scope.contact = contact;
+	$scope.support = support;
+	// $scope.certificate = certificate;
 
 	$scope.refresh = function() {
 		window.setTimeout(function(){
 			initBacklight();
 			initPortfolio();
-			$('#side-menu').slideDown('slow');
+			$(".lazy").lazyload({
+				effect : "fadeIn"
+			});
+
+			$('.init').fadeOut('fast', function(){
+				$('.init').remove();
+				$('#side-menu').fadeIn('fast');
+				$('#splash-content-container').fadeIn('slow',function(){
+					populateBG();
+					populateCache();
+					window.setTimeout(function(){
+						$('#side-menu').slideDown('slow');
+					}, 200);
+				});
+			});
+
 		}, 500);
 	};
+
+	$scope.changeLang = function(lang){
+		window.open('./#'+lang, "_parent");
+		window.location.reload();
+	}
 }
 
 
@@ -49,7 +97,12 @@ function populateCache(){
 	});
 }
 
+function checkIsMobile(){
+	return $(window).width() <= 720;
+}
 var menuDown = false;
+var menuToggle = false;
+var isMobile = checkIsMobile();
 
 function showMenuColor(top){
 	var thr = $(window).height()*0.618;
@@ -75,11 +128,13 @@ function refreashMenuHighlight(){
 				if (j==i) continue;
 				$('#'+j).removeClass('active');
 				$('#bg-'+j).fadeOut('slow');
+				$('.menu-slide-btn#'+i).removeClass('active');
 			}
 			$('#'+i).addClass('active');
 			if($('#bg-'+i).attr('id') != currentSplash){
 				currentSplash = $('#bg-'+i).attr('id');
 				$('#bg-'+i).fadeIn('slow');
+				$('.menu-slide-btn#'+i).addClass('active');
 			}
 		}
 	}
@@ -94,35 +149,12 @@ window.onresize = function(){
 	refreashMenuHighlight();
 }
 
-var formShowing = false;
-
-function postBooking(data, callback){
-	$.ajax({
-       type: "POST",
-       url: "https://sheetsu.com/apis/97c61c43",
-       data: data })
-    .done(function(res) {
-		callback();
-	})
-	.fail(function(res) {
-		alert("Service Error. Please contact me by email or Skype for your booking.");
-	});
-}
-
-function getCurrentDateTime(){
-	var currentdate = new Date(); 
-	return  currentdate.getDate() + "/"
-            + (currentdate.getMonth()+1)  + "/" 
-            + currentdate.getFullYear() + " "  
-            + currentdate.getHours() + ":"  
-            + currentdate.getMinutes() + ":" 
-            + currentdate.getSeconds();
-}
-
 $(function(){
 	$('#side-menu').hide();
-	populateBG();
-	populateCache();
+	//language
+	$('.lang-'+currentLang).css({
+		'display': 'inline-block'
+	});
 
 	//slide btn
 	$('.menu-slide-btn').each(function(){
@@ -135,39 +167,122 @@ $(function(){
 	// form
 	$('.book-toggle-btn').each(function(){
 		$(this).click(function(){
-			$("html, body").animate({ scrollTop: "0px" }, 300, function(){
-				if(!formShowing){
-					formShowing = true;
-					$('#form-hide').fadeOut('fast', function(){
-						$('#bookingForm-display').fadeIn('fast');
-					});
-				}
-			});
+			window.location.assign("./booking?lang="+currentLang);
 		})
 	});
-	$('#cancel-book-btn').click(function(){
-		if(formShowing){
-			formShowing = false;
-			$('#bookingForm-display').fadeOut('fast', function(){
-				$('#form-hide').fadeIn('fast');
+
+	// toggle for more about me section
+	// $('.toggle-more-about-me').click(function(){
+	// 	$('#more-about-me').finish().slideDown('fast');
+	// 	$(this).finish().fadeOut('fast');
+	// 	window.setTimeout(function(){
+	// 		$('.splash-div').click(function(e){
+	// 			if( e.target != this )
+ //       				return;
+	// 			$('.splash-div').off("click");
+	// 			$('#more-about-me').finish().slideUp('fast');
+	// 			$('.toggle-more-about-me').finish().fadeIn('fast');
+	// 		});
+	// 	}, 1000);
+	// });
+
+	// toggle for subscription
+	$('#subscribe-btn').click(function(){
+		$('#mc_embed_signup.'+currentLang).slideDown();
+		$(this).fadeOut('fast');
+		$('.subscription.success-message').fadeOut('fast');
+		$('.donation.success-message').fadeOut('fast');
+	});
+	$('.subscribe-btn-cancel').click(function(){
+		$('#mc_embed_signup.'+currentLang).slideUp();
+		$('#subscribe-btn').fadeIn('fast');
+	});
+	$('.subscribe-btn-submit').click(function(){
+		$('#mc_embed_signup.'+currentLang).slideUp();
+		$('#subscribe-btn').fadeIn('fast');
+		$('.subscription.success-message').fadeIn('fast');
+	})
+
+	//donation
+	$('#donate-btn').click(function(){
+		$('#paypal-donate-form').slideDown();
+		$(this).fadeOut('fast');
+		$('.subscription.success-message').fadeOut('fast');
+		$('.donation.success-message').fadeOut('fast');
+	});
+	$('#donate-btn-cancel').click(function(){
+		$('#paypal-donate-form').slideUp();
+		$('#donate-btn').fadeIn('fast');
+	});
+	$('#donate-btn-submit').click(function(){
+		$('#paypal-donate-form').slideUp();
+		$('#donate-btn').fadeIn('fast');
+		$('.donation.success-message').fadeIn('fast');
+	})
+	$('#story-next').click(function(){
+		var i = parseInt($(this).data('index'));
+		var oldBlock = $('#story-'+(i-1));
+		var block = $('#story-'+i);
+		if (block.length == 0){
+			i = 0;
+			$(this).data('index', i);
+			$('#story-next strong').html(story.next[currentLang]);
+		}else{
+			var nextBlock = $('#story-'+(i+1));
+			if (nextBlock.length == 0)
+				$('#story-next strong').html(formValues.back[currentLang]);
+		}
+		$(oldBlock).fadeOut('fast', function(){
+			var i = parseInt($('#story-next').data('index'));
+		console.log(i+1);
+			$('#story-'+i).fadeIn();
+			$('#story-next').data('index', i+1);
+		});
+
+	});
+	$('.mobile-menu-btn').click(function(){
+		if (!menuToggle){
+			menuToggle = true;
+			$('.menu-slide-btn').css('display', 'block');
+			$('.menu-slide-btn').finish().animate({
+				'opacity':'1'
+			}, 200);
+		}else{
+			menuToggle = false;
+			$('.menu-slide-btn').finish().animate({
+				'opacity':'0'
+			}, 200, function(){
+				$('.menu-slide-btn').css('display', 'none');
 			});
 		}
 	});
-
-	$('#bookingForm').submit(function(){
-		$(this).attr('disabled','disabled');
-		var data = $('#bookingForm').serialize() + '&created_at='+getCurrentDateTime();
-		postBooking(data, function(){
-			$('#bookingForm-display').fadeOut('fast', function(){
-				$("#success-message").fadeIn('fast');
-				$('#send-book-btn').removeAttr('disabled');
-				window.setTimeout(function(){
-					$("#success-message").fadeOut('fast', function(){
-						$('#form-hide').fadeIn('fast');
-						formShowing = false;
-					});
-				}, 1500);
-			});
-		});
+	$( window ).resize(function() {
+		var temp = checkIsMobile();
+		console.log(temp);
+		if (isMobile != temp){
+			isMobile = temp
+			if (isMobile){
+				$('.menu-slide-btn').css('display', 'none');
+				$('.menu-slide-btn').finish().animate({
+					'opacity':'0'
+				}, 200);
+			}else{
+				menuToggle = false;
+				$('.menu-slide-btn').css('display', 'inline-block');
+				$('.menu-slide-btn').finish().animate({
+					'opacity':'1'
+				}, 200);
+			}
+		}
 	});
 }());
+
+// GA
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-69806378-1', 'auto');
+ga('send', 'pageview');

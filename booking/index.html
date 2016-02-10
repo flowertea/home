@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--
+    Designed by GOLDENRATIPHI
+
+       ,(&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    @          @@@@     #@     @@@    @@                                                      @
+    @       @@          %@        @@  @&                                                      @
+    @    @@@            ,@          @ @(                                                      @
+    @   @@               @           @@.                                                      @
+    @ @@                 @            @                                                       @
+    @@@                  @            @                                                      @@
+    @@                   @####@@      @                                                      @@
+    @,                   @    @       @                                                     @@@
+    @                    @@@  @     @@@                                                     @ @
+    @                    @  @@@@  @@@ @                                                    @  @
+    @                                 @                                                   @.  @
+    @                                 @                                                  @@   @
+    @                                 @                                                 @@    @
+    @                                 @                                                @@     @
+    @@                                @                                               @       @
+    @@                                @                                             @@        @
+    @ @                               @                                            @@         @
+    @  @                              @                                          @@           @
+    @   @                             @                                        @@             @
+    @    @                            @                                      @@               @
+    @     @@                          @                                    @@                 @
+    @       @                         @                                 @@                    @
+    @         @                       @                              @@                       @
+    @           @@                    @(                         #@@                          @
+    @              @@                 @@                     @@@                              @
+    @                 @@@             @@               @@@@                                   @
+    @                     *@@@@@      @@      @@@@@@@                                         @
+                                                                    @ ytixu.github.io/HTMLdump
+    IZQ CN QNG HJZVS DQ LVUPGVPZ?
+    FVUUV EGTLC HYGUUTUP FZEHTYZ YNPZYIZR?
+    PZY TU YNGWI VY PNLCZURVYTNZHJ@PDVTL.WND
+
+-->
+
+<html ng:app="app">
+    <head>
+        <meta charset="utf-8">
+        <title>Mariana Claire: Payment Checkout</title>
+        <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="../favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+        <link rel="manifest" href="../favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="../favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.min.js"></script>
+        <!-- Angular -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js" ng:autobind></script>
+        <!-- Google font -->
+        <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Poiret+One:100,400' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <!-- My style :3 -->
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <style>
+            #title{
+                margin-top: 50px;
+                line-height: 100px;
+            }
+            #title h3{
+                margin-top: -20px;
+            }
+
+            select {
+              margin: 0;
+              line-height: 1.5em;
+              padding: 0.5em 3.5em 0.5em 1em !important;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              border: none;
+            }
+
+            .select-wapper{
+                border:solid gray 1px !important;
+                width:420px;
+                overflow: hidden;
+                border-radius: 5px;
+            }
+
+            select.minimal {
+              background-image:
+                linear-gradient(45deg, transparent 50%, gray 50%),
+                linear-gradient(135deg, gray 50%, transparent 50%),
+                linear-gradient(to right, #ccc, #ccc);
+              background-position:
+                calc(100% - 50px) calc(1em + 2px),
+                calc(100% - 45px) calc(1em + 2px),
+                calc(100% - 3.5em) 0.5em;
+              background-size:
+                5px 5px,
+                5px 5px,
+                1px 1.5em;
+              background-repeat: no-repeat;
+              width:450px;
+            }
+
+            select.minimal:focus {
+              background-image:
+                linear-gradient(45deg, transparent 50%, gray 50%),
+                linear-gradient(135deg, gray 50%, transparent 50%),
+                linear-gradient(to right, #ccc, #ccc);
+              background-position:
+                calc(100% - 50px) calc(1em + 2px),
+                calc(100% - 45px) calc(1em + 2px),
+                calc(100% - 3.5em) 0.5em;
+              background-size:
+                5px 5px,
+                5px 5px,
+                1px 1.5em;
+              background-repeat: no-repeat;
+              border-color: white;
+              outline: 0;
+            }
+
+            .currency-USD, .currency-CAD{
+                display:none;
+            }
+
+            .calendar{
+                border:solid gray 10px;
+                background-color:gray;
+                margin: 30px 0;
+            }
+            .content{
+                margin: 2% 5%;
+            }
+            #typeform-widget{
+                display:none;
+                position:fixed;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                z-index: 100;
+            }
+
+            #typeform-widget .control-btn{
+                position:absolute;
+                bottom:70px;
+                right:30px;
+                z-index:101;
+                text-align: center;
+            }
+
+            #progress-bar{
+                position:fixed;
+                z-index: 10;
+                bottom:0;
+                left: 0;
+                width:100%;
+                background-color: black;
+                /*padding-bottom:calc(2% + 10px);*/
+            }
+            #progress-bar .content-bar{
+                width:100%;
+                height:100%;
+                padding:10px;
+            }
+            #progress-bar div.btn{
+                float:right;
+            }
+             #progress-bar div.title{
+                margin-left:10%;
+            }
+            #progress-bar .bar{
+                display:block;
+                content:'';
+                height:10px;
+                width:0px;
+                background-color: #CC66FF;
+                margin-top:-10px;
+            }
+        </style>
+    </head>
+    <body ng-controller="viewCtrl">
+        <div id="splash-bg-container">
+            <div class="splash-bg"></div>
+        </div>
+        <div id="splash-content-container">
+            <div style="margin:10%"> </div>
+            <!-- <div class="container color-black">
+               <div class="text-right">
+                    <a href="../#{{ languageOpt }}" class="subtle"><i class="fa fa-chevron-left"></i> {{ data.subtitles.backHome[languageOpt] }}</a>
+                </div>
+            </div> -->
+            <div class="container color-black" ng-repeat="type in data.sections">
+                <div id="title" ng-if="$first" ng-bind-html="data.title[languageOpt] | to_trusted"></div>
+                <h2 class="text-left">{{ $index + 1 }}. {{ type.name[languageOpt] }}</h2>
+                <div class="content">
+                    <p ng-repeat="d in type.desc[languageOpt]" ng-bind-html="d | to_trusted"></p>
+                </div>
+
+                <center><form class="form-tran" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <table>
+                    <tr><td><input type="hidden" name="on0" data-value="{{ type.paybutton.name[languageOpt] }}"></td></tr><tr><td>
+                    <div class="select-wapper">
+                        <select class="minimal" name="os0" required>
+                        <option value="" disabled selected> -- {{ data.subtitles.selectDefault[languageOpt] }} -- </option>
+                        <option ng-repeat="o in type.paybutton.option[languageOpt]" value="{{o.value}}">
+                            {{ o.display }}
+                        </option>
+                    </select>
+                    </div></td></tr>
+                    </table>
+                    <input type="hidden" name="currency_code" value="USD">
+                    <input type="hidden" name="encrypted" data-value="{{ type.paybutton.key[languageOpt] }}">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form></center>
+
+
+                <div style="margin:5%"> </div>
+                <div class="text-right">
+                    <a href="../#{{ languageOpt }}" class="subtle"><i class="fa fa-chevron-left"></i> {{ data.subtitles.backHome[languageOpt] }}</a>
+                </div>
+            </div>
+            <div style="margin:10%"> </div>
+            <div class="container" style="margin-bottom:100px;">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <span class="credit">&copy;Mariana Claire | 2016</span>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <span class="credit">designed by&nbsp;</span><h3 style="margin-top:0;float:right;"><a href="http://ytixu.github.io/HTMLdump" target="_blank">Goldenrati&Phi;</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="color-black up-scroller"><i class="fa fa-angle-up fa-2x fa-inverse"></i></div>
+        <i ng-init="refresh()"></i>
+    </body>
+    <script src="../assets/scripts/package/reserve.js"></script>
+    <script src="../assets/scripts/upScroller.js"></script>
+</html>

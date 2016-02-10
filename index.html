@@ -31,27 +31,59 @@
     @                 @@@             @@               @@@@                                   @
     @                     *@@@@@      @@      @@@@@@@                                         @
 																	@ ytixu.github.io/HTMLdump
-	IZQ CN QNG HJZVS DQ LVUPGVPZ? 
-	FVUUV EGTLC HYGUUTUP FZEHTYZ YNPZYIZR? 
+	IZQ CN QNG HJZVS DQ LVUPGVPZ?
+	FVUUV EGTLC HYGUUTUP FZEHTYZ YNPZYIZR?
 	PZY TU YNGWI VY PNLCZURVYTNZHJ@PDVTL.WND
 
 -->
-<html data-ng-app lang="en">
+<html ng:app="app">
 	<head>
-		<title>Whisper in the Waves</title>
+		<meta charset="utf-8">
+		<title>Mariana Claire</title>
+		<meta name="description" content="Telepathic readings, oracle readings, soul drawings, reiki healing, sound healing, aura alchemy process... Come have a session with me and step into divinity and full healing.">
+
+		<!-- Facebook open graph :D -->
+		<meta property="og:url"         content="http://www.marianaclaire.com" />
+		<meta property="og:type"        content="article" />
+		<meta property="og:title"       content="Mariana Claire" />
+		<meta property="og:description" content="Telepathic readings, oracle readings, soul drawings, reiki healing, sound healing, aura alchemy process... Come have a session with me and step into divinity and full healing." />
+		<meta property="og:image"       content="http://www.marianaclaire.com/assets/images/profile.jpg" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="Mariana Claire" />
+		<meta name="twitter:description" content="Telepathic readings, oracle readings, soul drawings, reiki healing, sound healing, aura alchemy process... Come have a session with me and step into divinity and full healing." />
+		<meta name="twitter:image" content="http://www.marianaclaire.com/assets/images/profile.jpg" />
+
+		<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
 		<!-- jQuery -->
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<!-- Angular -->
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js" ng:autobind></script>
 		<!-- Google font -->
 		<link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Poiret+One:100,400' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-
-		<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:900' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<!-- Icons -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
@@ -59,165 +91,422 @@
 		<link rel="stylesheet" href="assets/css/style.css">
 		<link rel="stylesheet" href="assets/css/portfolio.css">
 
-		<style type="text/css">
-			/*[data-sr] { visibility: hidden; }*/
-		</style>
 	</head>
-	<body>
+	<body ng-controller="viewCtrl">
+        <i class="init fa fa-refresh fa-spin"></i>
 		<div id="splash-bg-container"></div>
 		<div id="side-menu">
-			<a data-id="services" class="menu-slide-btn"><div id="splash2">Services</div></a>
-			<a data-id="drawings" class="menu-slide-btn"><div id="splash3">Drawings</div></a>
-			<a data-id="contact" class="menu-slide-btn"><div id="splash5">About Me</div></a>
-			<a data-id="testimonials" class="menu-slide-btn"><div id="splash6">Testimonials</div></a>
-			<!-- <a><div>Blog</div></a> -->
-			<a><div class="book-toggle-btn">Book Service</div></a>
+			<span class="mobile-menu-btn"><a><i class="fa fa-bars"></i></a></span>
+			<span data-id="services" class="menu-slide-btn" id="splash2"><a>
+				{{ titles.service[languageOpt] }}
+			</a></span>
+			<span data-id="drawings" class="menu-slide-btn" id="splash3"><a>
+				{{ titles.drawing[languageOpt] }}
+			</a></span>
+			<span data-id="contact" class="menu-slide-btn" id="splash5"><a>
+				{{ titles.about[languageOpt] }}
+			</a></span>
+			<span data-id="testimonials" class="menu-slide-btn" id="splash6"><a>
+				{{ titles.test[languageOpt] }}
+			</a></span>
+			<span class="menu-slide-btn" id="splash6"><a href="./faq/#{{languageOpt}}">
+				FAQ
+			</a></span>
+			<span class="book-toggle-btn"><a>
+				{{ titles.book[languageOpt] }}
+			</a></span>
 		</div>
 		<div id="splash-content-container">
 			<div class="splash-div full-height" data-id="splash1" data-image="assets/images/1.jpg">
 				<div id="splash-title" class="full-center">
 					<span id="form-hide">
-						Whisper in the Waves
+						Mariana Claire
 						<div class="splash-subtitle">
-							a step into divinity and full healing
+							<span class="lang-ENG">a step into divinity and full healing</span>
+							<span class="lang-FREN">un pas vers la divinité et la guérison spirituelle</span>
+							<span class="lang-ESP">un paso hacia su poder interior</span>
 							<br><br>
-							<button type="button" class="btn btn-trans btn-trans-default book-toggle-btn"><strong>BOOK A SESSION</strong></button>
+							<button type="button" class="btn btn-trans btn-trans-default book-toggle-btn all-cap"><strong>
+								{{ titles.book[languageOpt] }}
+							</strong></button>
+							<div style="padding:2%"> </div>
+							<a href="#ENG" class="lang-ESP lang-FREN" ng-click="changeLang('ENG')">English</a>
+							<a href="#ESP" class="lang-ENG lang-FREN" ng-click="changeLang('ESP')">Español</a>
+							<a href="#FREN" class="lang-ENG lang-ESP" ng-click="changeLang('FREN')">Français</a>
 						</div>
 					</span>
-					<div id="bookingForm-display" class="splash-subtitle">
-						<form id="bookingForm">
-							<div class="row">
-								<label class="col-md-2 text-right">Name:</label>
-								<input class="col-md-9" type="text" name="name" required>
-							</div>
-							<div class="row">
-								<label class="col-md-2 text-right">Message:</label>
-								<textarea class="col-md-9" name="message" placeholder="Tell me about the service that you would like to have and the time you would like to have it." required></textarea>
-							</div>
-							<div class="row">
-								<label class="col-md-2 text-right">Contact:</label>
-								<textarea class="col-md-9" name="contact" maxlength="55" placeholder="Your email, skype username or any other means to get back to you." required></textarea>
-							</div><br>
-							<input type="submit" value="CONFIRM" id="send-book-btn" class="btn btn-trans btn-trans-default" style="font-weight:bold;">
-							<button type="button" id="cancel-book-btn" class="btn btn-trans btn-trans-default"><strong>CANCEL</strong></button>
-						</form>
-					</div>
-					<div id="success-message" class="splash-subtitle">
-						Thanks for booking my service! I will get back to you soon.<br><br>
-					</div>
+					<!-- <div class="splash-subtitle success-message">
+						<span class="lang-ENG">Thanks for booking my service! I will get back to you soon.</span>
+						<span class="lang-FREN">Merci d'avoir réservé un de mes services, je vous contacterais dès que je peux.</span>
+						<span class="lang-ESP">Gracias por reservar uno de mis servicios, lo contactare apenas pueda.</span>
+						<br><br>
+					</div> -->
+				</div>
+				<div class="contact-links">
+					<a href="https://www.facebook.com/Mariana-Claire-1484113901885029/" target="_blank"><i class="fa fa-facebook-official"></i></a>
+					<a href="skype:marianaclaire?userinfo" title="marianaclaire"><i class="fa fa-skype"></i></a>
+					<a href="mailto:marianaclaireinfo@gmail.com" title="marianaclaireinfo@gmail.com"><i class="fa fa-envelope"></i></a>
+					<a href="https://www.youtube.com/channel/UCECj3HY7vZ1-oAdtYjU1U-Q" target="_blank" class="lang-ENG lang-FREN"><i class="fa fa-youtube"></i></a>
+					<a href="https://www.youtube.com/channel/UCf6E45-GT_KuFr_ucu8bmQw/feed" target="_blank" class="lang-ESP"><i class="fa fa-youtube"></i></a>
+					<a href="https://medium.com/@MarianaClaire" target="_blank"><i class="fa fa-medium"></i></a>
+					<a href="https://www.instagram.com/the_akashic_alchemist/" target="_blank"><i class="fa fa-instagram"></i></a>
 				</div>
 			</div>
 
-			<a name="services"></a>
-			<div class="splash-div min-full-height" data-id="splash2" data-image="assets/images/2.jpg">
-				<div class="row color-black" ng-controller="viewCtrl" style="margin:0;">
-					<div class="subtitle col-md-1">
+			<div class="splash-div" data-id="splash2" data-image="assets/images/2.jpg">
+				<a name="services"></a>
+				<div style="padding:2%"> </div>
+				<div class="color-black" style="margin-top:50px;">
+					<div style="padding:2%"> </div>
+					<div class="row">
+						<div class="col-lg-2 col-md-0"></div>
+						<div class="col-lg-8 col-md-12">
+							<div class="row">
+								<div class="col-lg-4 col-md-12">
+									<div class="subtitle">
+										<span>{{ titles.service[languageOpt] }}</span>
+									</div>
+									<div class="row">
+										<div class="col-md-12">{{ serviceText[languageOpt] }}</div>
+									</div>
+								</div>
+								<div class="col-lg-8 col-md-12">
+									<br>
+									<div class="row">
+										<div class="col-lg-12 col-md-4 col-sm-4 col-xs-12 text-lg-right text-xs-right">
+											<strong>{{serviceText.payment.title[languageOpt]}}</strong>
+										</div>
+										<div class="col-lg-12 col-md-8 col-sm-8 col-xs-12">
+											<!-- <i class="fa fa-paypal"></i> -->
+											<a href="./price#{{ languageOpt }}">{{ serviceText.payment.paymentShortRedirect[languageOpt] }}</a>
+											<!-- <ul>
+												<li ng-repeat="p in serviceText.payment.prices[languageOpt]">
+													{{p}}
+												</li>
+											</ul> -->
+											<br><br>
+										</div>
+									</div>
+									<div class="row" ng-repeat="d in serviceText.details">
+										<div class="col-lg-12 col-md-4 col-sm-4 col-xs-12 text-lg-right text-xs-right">
+											<strong>{{ d.title[languageOpt] }}</strong>
+										</div>
+										<div class="col-lg-12 col-md-8 col-sm-8 col-xs-12">
+											{{ d.desc[languageOpt] }}
+											<span ng-if="!$last">
+												<br><br>
+											</span>
+										</div>
+									</div>
+			 						<div class="subtitle">
+			 							<button type="button" class="btn btn-trans btn-trans-default book-toggle-btn all-cap">
+					 					<strong>{{ titles.book[languageOpt] }}</strong>
+										</button>
+									</div>
+								</div>
+							</div>
+							<br>
+							<div class="service-display">
+								<div class="backlight service-item" ng-repeat="s in services" data-color="{{s.color}}">
+									<a class="white" href="services/index.html#{{s.slug[languageOpt]}}">
+										<div class="service-icon-sub"><i class="fa {{s.faIconBase}}"></i></div>
+										<div class="service-icon"><i class="fa {{s.faIcon}}"></i></div>
+										<br>
+										<center>{{ s.name[languageOpt] }}</center>
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="col-md-3">
-						<div class="subtitle">Services</div>
-						<table>
-							<tr><td>Language</td>
-								<td>Available in English, French and Spanish</td>
-							</tr>
-							<tr><td>Location</td>
-								<td>Skype or in person if you live in Calgary</td>
-							</tr>
-							<tr><td>Payment</td>
-								<td>Paypal to my email: mseoane52@gmail.com
-									<ul>
-										<li>45$ for 30 mins</li>
-										<li>67$ for 45 mins</li>
-										<li>89$ for 1 hour</li>
-										<li>112$ for 75 mins</li>
-										<li>135$ for 90 mins</li>
-										<li>and 60$ for a soul drawing + shipping</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<div class="subtitle"><button type="button" class="btn btn-trans btn-trans-default book-toggle-btn"><strong>BOOK A SESSION</strong></button></div>
-					</div>
-					<div class="col-md-1 backlight" ng-repeat="s in services" data-color="{{s.color}}">
-						<div class="service-icon-sub"><i class="fa {{s.faIconBase}}"></i></div>
-						<div class="service-icon"><i class="fa {{s.faIcon}}"></i></div>
-						<h3>{{s.name}}</h3>
-						<p>{{s.description}}</p>
-					</div>
-					<div class="col-md-1">
-					</div>
+					<div style="padding:2%"> </div>
 				</div>
 			</div>
+			<div style="margin:5%"></div>
 
 			<a name="drawings"></a>
 			<div class="splash-div" data-id="splash3" data-image="assets/images/3.jpg">
-				<div class="portfolio" ng-controller="viewCtrl">
-					<div class="portfolio-title color-black">
-						<div class="portfolio-buttom-align">Sample<br>Drawings</div>
-					</div>
-					<div class="portfolio-image" ng-repeat="d in drawings"
-						ng-init="$last ? refresh() : null" data-image="{{d.image}}">
-						<div class="portfolio-image-toggle">
-							<div class="portfolio-image-title">{{d.name}}</div>
-							<div class="portfolio-image-description">{{d.description}}</div>
+				<div class="portfolio color-black">
+					<div class="portfolio-title">
+						<div class="portfolio-buttom-align">
+							<span class="lang-ENG">Sample<br>Drawings</span>
+							<span class="lang-FREN">Échantillon<br>de Dessins</span>
+							<span class="lang-ESP">Ejemplos<br>de Dibujos</span>
 						</div>
 					</div>
-					<div class="portfolio-last color-black">
-						<p>Soul Drawings are drawings of either your higher self or aspects of you, it could be your guides or one of your past life.</p>
-						<div class="subtitle"><button type="button" class="btn btn-trans btn-trans-default book-toggle-btn"><strong>BOOK A SESSION</strong></button></div>
+					<div class="portfolio-image lazy" ng-repeat="d in drawings[0].data" data-original="{{d.image}}" ng-if="$index < 1">
+						<div class="portfolio-image-toggle">
+							<div class="portfolio-image-title">{{d.name[languageOpt]}}</div>
+							<div class="portfolio-image-description">{{drawings.auraField.title[languageOpt]}}</div>
+						</div>
+					</div>
+					<div class="portfolio-image lazy" ng-repeat="d in drawings[1].data" data-original="{{d.image}}" ng-if="$index < 4">
+						<div class="portfolio-image-toggle">
+							<div class="portfolio-image-title">{{d.name[languageOpt]}}</div>
+							<div class="portfolio-image-description">{{drawings.auraField.title[languageOpt]}}</div>
+						</div>
+					</div>
+					<div class="portfolio-image lazy" ng-repeat="d in drawings[2].data" data-original="{{d.image}}" ng-if="$index < 2" >
+						<div class="portfolio-image-toggle">
+							<div class="portfolio-image-title">{{d.name[languageOpt]}}</div>
+							<div class="portfolio-image-description">{{drawings.intuitive.title[languageOpt]}}</div>
+						</div>
+					</div>
+					<div class="portfolio-image lazy" ng-repeat="d in drawings[3].data" data-original="{{d.image}}" ng-if="$index < 4" >
+						<div class="portfolio-image-toggle">
+							<div class="portfolio-image-title">{{d.name[languageOpt]}}</div>
+							<div class="portfolio-image-description">{{drawings.intuitive.title[languageOpt]}}</div>
+						</div>
+					</div>
+					<div class="portfolio-last">
+						<span>{{sampleDrawing.shortDesc[languageOpt]}}</span>
+						<div class="subtitle">
+							<button type="button" class="btn btn-trans btn-trans-default book-toggle-btn all-cap">
+			 					<strong class="lang-ENG">Purchase a drawing</strong>
+								<strong class="lang-FREN">Acheter un dessin</strong>
+								<strong class="lang-ESP">Compre un dibujo</strong>
+							</button>
+							<a href="./drawings#{{languageOpt}}" class="btn btn-trans btn-trans-default all-cap">
+			 					<strong class="lang-ENG">View More Drawings</strong>
+								<strong class="lang-FREN">Pour en voir plus</strong>
+								<strong class="lang-ESP">Ver más dibujos</strong>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 
 			<a name="contact"></a>
-			<div class="splash-div" data-id="splash5" data-image="assets/images/4.jpg">
+			<div class="splash-div" data-id="splash5" data-image="assets/images/3.jpg">
 				<div style="margin:5%"></div>
 				<div class="container color-black">
+					<div class="subtitle">
+						<span>{{ titles.about[languageOpt] }}</span>
+					</div>
 					<div class="row">
 						<div class="col-md-4">
 							<center><img class="circle-image" src="assets/images/profile.jpg"></center>
+							<h3></h3>
 						</div>
-						<div class="col-md-8" ng-controller="viewCtrl">
-							<div class="subtitle">Mariana Claire</div>
-							<h3>About Me</h3>
-							<p>My mission is to help people around the world to step into their divinity and full healing.</p>
-							<div class="contact-links">
-								<a href="https://www.facebook.com/Whisper-in-the-Waves-1484113901885029/" target="_blank"><i class="fa fa-facebook-official"></i></a>
-								<a href="skype:Marianas521?userinfo" title="Marianas521"><i class="fa fa-skype"></i></a>
-								<a href="mailto:mseoane52@gmail.com" title="mseoane52@gmail.com"><i class="fa fa-envelope"></i></a>
+						<div class="col-md-8">
+							<h3>{{ contact.contact[languageOpt] }}</h3>
+							<p><i class="fa fa-skype"></i> Skype: marianaclaire</p>
+							<p><i class="fa fa-envelope"></i> Email: marianaclaireinfo@gmail.com</p>
+
+							<h3>{{ story.title[languageOpt] }}</h3>
+							<span ng-repeat="s in story.content[languageOpt]" id="story-{{$index}}" style="display:{{ $index == 0 ? 'block' : 'none'}}">
+								<p ng-bind-html="$last ? s : s+' ...' | to_trusted"></p>
+
+							</span>
+							<div class="subtitle" style="font-size:16px;"><button class="btn btn-trans btn-trans-default all-cap" id="story-next" data-index="1"><Strong>{{story.next[languageOpt]}}</strong></button></div>
+						</div>
+					</div>
+					<br>
+					<div style="padding: 0 20px;"> <!-- id="more-about-me" -->
+						<!-- <div style="padding: 20px;">
+							<h2>{{ certificate.title[languageOpt] }}</h2>
+							<div class="row" style="padding:20px 0;">
+								<a ng-repeat="c in certificate.files" href="./{{ c.url }}" target="_blank">
+									<div class="col-md-4 text-center">
+										<span class="fa-stack fa-lg">
+										  <i class="fa fa-certificate fa-stack-2x stack-base"></i>
+										  <i class="fa {{c.faIcon}} fa-stack-1x fa-inverse"></i>
+										</span>
+										{{ c.name[languageOpt] }}
+									</div>
+								</a>
+							</div>
+						</div> -->
+						<div style="padding: 20px;">
+							<h2>{{ contact.title[languageOpt] }}</h2>
+							<div class="row boxed" ng-repeat="c in contact.links">
+								<br>
+								<div class="col-md-4 text-right">
+									<h3 style="margin-top:0;"><i class="fa {{ c.faIcon }}"></i> {{c.category}}</h3>
+								</div>
+								<div class="col-md-8">
+									<div ng-repeat="cc in c.links">
+										<a href="{{ cc.url }}" target="_blank">
+											<strong>{{ cc.name[languageOpt] }}</strong>
+										</a><br>
+										{{ cc.desc[languageOpt] }}
+										<div style="margin:10px;"> </div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="portfolio">
+							<div class="portfolio-image sm-padded lazy" ng-repeat="i in contact.pictures"
+								data-original="{{i}}">
+								<div class="portfolio-image-toggle">
+									<div class="portfolio-image-title"></div>
+									<div class="portfolio-image-description"></div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<a name="testimonials"></a>
-			<div class="splash-div" data-id="splash5" data-image="assets/images/4.jpg">
+			<div class="splash-div" data-id="splash6" data-image="assets/images/4.jpg">
 				<div class="container color-black">
 					<div class="row">
-						<div class="col-md-8">
-							<div class="subtitle">Testimonials</div>
+						<div class="col-lg-8">
+							<div class="subtitle">
+								<span>{{ titles.test[languageOpt] }}</span></div>
 							<div id="testimonial-display">
 								<span class="current"></span>/<span class="total"></span>
 								<blockquote>
 
 								</blockquote>
 								<div class="text-right">
-									~ by <span class="author"></span> - <span class="time"></span>
+									~ <span class="author"></span> - <span class="time"></span>
 								</div>
 							</div>
-							<div class="subtitle"><button type="button" id="more-test-btn" class="btn btn-trans btn-trans-default"><strong>READ ANOTHER ONE</strong></button></div>
+							<div class="subtitle"><button type="button" id="more-test-btn" class="btn btn-trans btn-trans-default all-cap"><strong>
+								<span class="lang-ENG">Read another one</span>
+								<span class="lang-FREN">lire un autren</span>
+								<span class="lang-ESP">leer otro</span>
+							</strong></button></div>
 						</div>
-						<div class="col-md-4">
-							<div class="fb-page" data-href="https://www.facebook.com/Whisper-in-the-Waves-1484113901885029/timeline/" data-width="100%" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"></div>
-							<div id="fb-root"></div>
+						<div class="col-lg-4">
+							<div class="row">
+								<div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+									<center><div class="fb-page" data-href="https://www.facebook.com/Mariana-Claire-1484113901885029/timeline/" data-width="100%" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"></div>
+									<div id="fb-root"></div></center>
+								</div>
+								<div class="col-lg-12 col-md-6 col-sm-6 col-xs-12" style="padding-left:20px">
+									<h3 class="lang-ENG">Write a Testimonial</h3>
+									<h3 class="lang-FREN">Écrire un temoignage</h3>
+									<h3 class="lang-ESP">Escribir un testimonio</h3>
+									<p  class="lang-ENG">If you would like to write a testimonial after receiving one of my services, please post it on the <a href="https://www.facebook.com/Mariana-Claire-1484113901885029/" target="_blank">facebook page</a>.</p>
+									<p class="lang-FREN">Si vous aimerez écrire un témoignage après d’avoir reçu un de mes services, s’il-vous-plaît l’écrire sur ma <a href="https://www.facebook.com/Mariana-Claire-1484113901885029/" target="_blank">page de facebook</a>.</p>
+									<p class="lang-ESP">Si le gustaría escribir un testimonio después de recibir alguno de mis servicios, por favor escríbalo en mi <a href="https://www.facebook.com/Mariana-Claire-1484113901885029/" target="_blank">pagina de facebook</a>.</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div style="margin:10%"> </div>
-				<div class="container">
-					<div class="credit">&copy;Goldenrati&Phi; | 2015</div>
+
+				<div class="color-black text-center">
+					<div style="padding:2%"> </div>
+					<h3><i class="fa fa-heart"></i><br>{{ support.preTitle[languageOpt] }}</h3>
+					<h2>{{ support.title[languageOpt] }}</h2><br>
+					<p ng-repeat="s in support.content[languageOpt]" ng-bind-html="s | to_trusted"></p>
+
+					<h3>
+				    	<button id="subscribe-btn" type="button" class="btn btn-trans btn-trans-default all-cap"><strong>{{ support.subscribe.button[languageOpt] }}</strong></button>
+				    	<button id="donate-btn" type="button" class="btn btn-trans btn-trans-default all-cap"><strong>{{ support.donate.button[languageOpt] }}</strong></button>
+				    </h3>
+				    <br>
+					<!-- MailChimp here yo! -->
+					<div id="mc_embed_signup" class="ENG FREN">
+						<form action="https://github.us12.list-manage.com/subscribe/post?u=86b2f11129f62b83a657c5839&amp;id=2f65f215a0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-tran" target="_blank" novalidate>
+						    <div id="mc_embed_signup_scroll">
+								<h2>{{ support.subscribe.title[languageOpt] }}</h2>
+								<div class="indicates-required"><span class="asterisk">*</span> {{ formValues.requiredIndice[languageOpt] }}</div>
+								<div class="mc-field-group">
+									<label for="mce-EMAIL">{{ formValues.email[languageOpt]}}  <span class="asterisk">*</span>
+								</label>
+									<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+								</div>
+								<div class="mc-field-group">
+									<label for="mce-FNAME">{{ formValues.firstName[languageOpt] }} </label>
+									<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+								</div>
+								<div class="mc-field-group">
+									<label for="mce-LNAME">{{ formValues.lastName[languageOpt] }}  </label>
+									<input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+								</div>
+								<div id="mce-responses" class="clear">
+									<div class="response" id="mce-error-response" style="display:none"></div>
+									<div class="response" id="mce-success-response" style="display:none"></div>
+								</div>
+							    <div style="position: absolute; left: -5000px;"><input type="text" name="b_86b2f11129f62b83a657c5839_2f65f215a0" tabindex="-1" value=""></div>
+							    <h3>
+							    	<button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-trans btn-trans-default all-cap subscribe-btn-submit"><strong>{{ support.subscribe.button[languageOpt] }}</strong></button>
+							    	<button type="button" class="btn btn-trans btn-trans-default all-cap subscribe-btn-cancel"><strong>{{ formValues.cancel[languageOpt] }}</strong></button>
+							    </h3>
+							 </div>
+						</form>
+						<br>
+					</div>
+					<div id="mc_embed_signup" class="ESP">
+						<form action="https://github.us12.list-manage.com/subscribe/post?u=86b2f11129f62b83a657c5839&amp;id=a6c1c28b7d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-tran" target="_blank" novalidate>
+						    <div id="mc_embed_signup_scroll">
+								<h2>{{ support.subscribe.title[languageOpt] }}</h2>
+								<div class="indicates-required"><span class="asterisk">*</span> {{ formValues.requiredIndice[languageOpt] }}</div>
+								<div class="mc-field-group">
+									<label for="mce-EMAIL">{{ formValues.email[languageOpt]}}  <span class="asterisk">*</span>
+								</label>
+									<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+								</div>
+								<div class="mc-field-group">
+									<label for="mce-FNAME">{{ formValues.firstName[languageOpt] }} </label>
+									<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+								</div>
+								<div class="mc-field-group">
+									<label for="mce-LNAME">{{ formValues.lastName[languageOpt] }}  </label>
+									<input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+								</div>
+								<div id="mce-responses" class="clear">
+									<div class="response" id="mce-error-response" style="display:none"></div>
+									<div class="response" id="mce-success-response" style="display:none"></div>
+								</div>
+							    <div style="position: absolute; left: -5000px;"><input type="text" name="b_86b2f11129f62b83a657c5839_a6c1c28b7d" tabindex="-1" value=""></div>
+							    <h3>
+							    	<button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-trans btn-trans-default all-cap subscribe-btn-submit"><strong>{{ support.subscribe.button[languageOpt] }}</strong></button>
+							    	<button type="button" class="btn btn-trans btn-trans-default all-cap subscribe-btn-cancel"><strong>{{ formValues.cancel[languageOpt] }}</strong></button>
+							    </h3>
+							 </div>
+						</form>
+						<br>
+					</div>
+
+					<div id="paypal-donate-form">
+						<h2>{{ support.donate.title[languageOpt] }}</h2>
+						<br>
+						<p ng-bind-html="support.donate.content[languageOpt] | to_trusted"></p>
+						<!-- Paypall here yo! -->
+						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+							<input type="hidden" name="cmd" value="_s-xclick">
+							<input type="hidden" name="encrypted" value="{{ serviceText.payment.paypalDonate }}">
+							<input type="image" id="donate-btn-submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+							<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+						</form>
+						<h3>
+					    	<button type="button" id="donate-btn-cancel" class="btn btn-trans btn-trans-default all-cap"><strong>{{ formValues.cancel[languageOpt] }}</strong></button>
+					    </h3>
+					</div>
+
+					<div class="subscription success-message">
+						<span class="lang-ENG">Thank you for subcribing to our newsletters!</span>
+						<span class="lang-FREN">Merci de vous abonner au bulletin d'informations !</span>
+						<span class="lang-ESP">Gracias por suscribirse a mi boletín de información!</span>
+					</div>
+					<div class="donation success-message">
+						<span class="lang-ENG">Thank you for donating to Mariana Claire!</span>
+						<span class="lang-FREN">Merci de donner à Mariana Claire!</span>
+						<span class="lang-ESP">Gracias por su donación a Mariana Claire!</span>
+					</div>
+
+					<div style="padding:2%"> </div>
 				</div>
+				<div style="margin:10%"> </div>
+				<div class="container" style="margin-bottom:0;">
+					<div class="row">
+						<div class="col-xs-6">
+							<span class="credit">&copy;Mariana Claire | 2016</span>
+						</div>
+						<div class="col-xs-6 text-right">
+							<span class="credit">designed by&nbsp;</span><h3 style="margin-top:0;float:right;"><a href="http://ytixu.github.io/HTMLdump" target="_blank">Goldenrati&Phi;</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="color-black up-scroller"><i class="fa fa-angle-up fa-2x fa-inverse"></i></div>
 			</div>
 		</div>
+		<i ng-init="refresh()"></i>
 	</body>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
@@ -226,11 +515,15 @@
 	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
 	<!-- My script :3 -->
 	<script src="assets/scripts/services.js"> </script>
+	<script src="assets/scripts/package/prices.js"> </script>
 	<script src="assets/scripts/drawings.js"> </script>
 	<script src="assets/scripts/test.js"> </script>
+	<script src="assets/scripts/data.js"> </script>
 	<script src="assets/scripts/backlight.js"> </script>
 	<script src="assets/scripts/portfolio.js"> </script>
 	<script src="assets/scripts/script.js"> </script>
+	<script src="assets/scripts/upScroller.js"> </script>
 </html>
